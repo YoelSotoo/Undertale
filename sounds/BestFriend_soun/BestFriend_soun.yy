@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"BestFriend_soun",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":27.608526,
+  "name":"BestFriend_soun",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"BestFriend_soun.wav",
+  "type":0,
+  "volume":1.0,
+}
