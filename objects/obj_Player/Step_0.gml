@@ -17,25 +17,27 @@ if place_meeting(x, y+ yspd,  obj_Wall){
 	yspd = 0;
 }
 
-//animacion
-if xspd > 0 {
-	sprite_index = spr_Player_L
-} else if xspd < 0{
-	sprite_index = spr_Player_R 
-}
 
-if yspd > 0 {
-	sprite_index = spr_Player_D
-} else if yspd < 0{
-	sprite_index = spr_Player_U 
-}
+if(can_move ){
+	//animacion
+	if xspd > 0 {
+		sprite_index = spr_Player_L
+	} else if xspd < 0{
+		sprite_index = spr_Player_R 
+	}
 
-if (xspd !=0 or yspd !=0){
-	image_speed = 1;
-} else{
-	image_speed = 0;
-	image_index = 0; 
-}
+	if yspd > 0 {
+		sprite_index = spr_Player_D
+	} else if yspd < 0{
+		sprite_index = spr_Player_U 
+	}
 
+	if (xspd !=0 or yspd !=0){
+		image_speed = 1;
+	} else{
+		image_speed = 0;
+		image_index = 0; 
+	}
+}
 x += xspd;
 y += yspd; 

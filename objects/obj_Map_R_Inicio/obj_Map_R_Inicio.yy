@@ -6,8 +6,8 @@
   "name":"obj_Map_R_Inicio",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Map",
+    "path":"folders/Objects/obj_tutorial/Map.yy",
   },
   "parentObjectId":null,
   "persistent":false,
