@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":27.608526,
+  "duration":93.019135,
   "name":"BestFriend_soun",
   "parent":{
     "name":"Sounds",
