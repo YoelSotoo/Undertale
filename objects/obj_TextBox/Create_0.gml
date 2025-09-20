@@ -19,3 +19,5 @@ old_draw_char = 0;
 text_speed = 1;
 
 setup = false;
+
+speaker_sprite[0] = noone;

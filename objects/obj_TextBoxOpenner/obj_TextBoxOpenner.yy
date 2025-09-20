@@ -9,8 +9,8 @@
   "name":"obj_TextBoxOpenner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"TextBox",
+    "path":"folders/Objects/TextBox.yy",
   },
   "parentObjectId":null,
   "persistent":false,

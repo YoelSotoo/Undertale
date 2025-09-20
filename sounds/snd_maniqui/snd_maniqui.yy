@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_text",
+  "%Name":"snd_maniqui",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.12929705,
-  "name":"snd_text",
+  "duration":0.18303855,
+  "name":"snd_maniqui",
   "parent":{
-    "name":"Text",
-    "path":"folders/Sounds/Text.yy",
+    "name":"Tutorial",
+    "path":"folders/Sounds/Enemy/Tutorial.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_text.wav",
+  "soundFile":"snd_maniqui.wav",
   "type":0,
   "volume":1.0,
 }
