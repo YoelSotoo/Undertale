@@ -15,10 +15,10 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Recursos","folderPath":"folders/Objects/Recursos.yy","name":"Recursos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"obj_tutorial","folderPath":"folders/Objects/obj_tutorial.yy","name":"obj_tutorial","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Enemy","folderPath":"folders/Objects/obj_tutorial/Enemy.yy","name":"Enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Map","folderPath":"folders/Objects/obj_tutorial/Map.yy","name":"Map","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Recursos","folderPath":"folders/Objects/Recursos.yy","name":"Recursos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"TextBox","folderPath":"folders/Objects/TextBox.yy","name":"TextBox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -103,9 +103,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Rm_Ruins_Tutorial","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},},
     {"roomId":{"name":"Rm_Ruins_Inicio","path":"rooms/Rm_Ruins_Inicio/Rm_Ruins_Inicio.yy",},},
     {"roomId":{"name":"Rm_Ruins_Inicio_2","path":"rooms/Rm_Ruins_Inicio_2/Rm_Ruins_Inicio_2.yy",},},
+    {"roomId":{"name":"Rm_Ruins_Tutorial","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
