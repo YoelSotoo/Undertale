@@ -29,7 +29,7 @@
   "origin":0,
   "parent":{
     "name":"spr_Fight",
-    "path":"folders/Sprites/Player/spr_Fight.yy",
+    "path":"folders/Battle_System/Sprites/spr_Fight.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -17,6 +17,13 @@ if place_meeting(x, y+ yspd,  obj_Wall){
 	yspd = 0;
 }
 
+//correr
+if keyboard_check(vk_shift) || keyboard_check(ord("C")){
+	move_spd = run_spd;
+
+}else{
+	move_spd = walk_spd;	
+}
 
 if(can_move ){
 	//animacion
