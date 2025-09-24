@@ -21,3 +21,7 @@ text_speed = 1;
 setup = false;
 
 speaker_sprite[0] = noone;
+
+//Battle
+battle_on_end = false;
+enemy_to_battle = noone;

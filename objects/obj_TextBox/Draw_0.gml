@@ -52,9 +52,27 @@ if (confirm_key || skip_key) {
             page++;
             draw_char = 0;
         } else {
-            obj_Player.can_move = true;
-            instance_destroy();
-        }
+             if (battle_on_end == true) {
+        
+		obj_Player.visible = false;
+		obj_Player.x = 0;
+		obj_Player.y = 0;
+		obj_Player.can_move = false;
+		
+        // Guardamos contra qué enemigo luchar en una variable global
+        global.current_enemy = enemy_to_battle;
+        
+        // Nos vamos a la room de batalla
+        room_goto(rm_Battle);
+		
+        
+		 } else {
+        
+        // Si no hay batalla, hacemos lo de antes
+        obj_Player.can_move = true;
+        instance_destroy();
+		  }
+       }
     }
 }
 // =================== DIBUJADO ===================
