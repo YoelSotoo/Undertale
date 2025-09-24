@@ -27,16 +27,27 @@ if (setup == false) {
     }
 }
 
-// =================== LÓGICA DE TEXTO Y PÁGINAS ===================
-// "Escribir" el texto
+// =================== LÓGICA DE TEXTO Y PÁGINAS (VERSIÓN MEJORADA) ===================
+
+// "Escribir" el texto (esta parte no cambia)
 if (draw_char < text_length[page]) {
-    draw_char += text_speed;
-    draw_char = clamp(draw_char, 0, text_length[page]);
+    draw_char += text_speed;
+    draw_char = clamp(draw_char, 0, text_length[page]);
 }
 
-// Control de páginas
-if (confirm_key) {
-    if (draw_char == text_length[page]) {
+// --- Nueva lógica unificada para avanzar y saltar ---
+
+// Si el jugador presiona CUALQUIER tecla de acción (Z, Enter, X, o Shift)
+if (confirm_key || skip_key) {
+
+    // Y el texto AÚN SE ESTÁ ESCRIBIENDO...
+    if (draw_char < text_length[page]) {
+        // ...terminamos la animación de golpe.
+        draw_char = text_length[page];
+    }
+    // SI NO, si el texto YA TERMINÓ...
+    else {
+        // ...pasamos a la siguiente página o cerramos el cuadro.
         if (page < page_number - 1) {
             page++;
             draw_char = 0;
@@ -44,11 +55,8 @@ if (confirm_key) {
             obj_Player.can_move = true;
             instance_destroy();
         }
-    } else if (skip_key) {
-        draw_char = text_length[page];
     }
 }
-
 // =================== DIBUJADO ===================
 // Dibuja el cuadro de texto
 var txtb_sprite_w = sprite_get_width(txtb_sprite);
