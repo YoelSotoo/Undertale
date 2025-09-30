@@ -1,5 +1,5 @@
- global.border_width = 570;
- global.border_height = 120;
+ global.border_width = 150;
+ global.border_height = 150;
  
 //player details 
 global.soul_spd = 2;

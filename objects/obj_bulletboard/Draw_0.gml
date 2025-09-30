@@ -1,35 +1,48 @@
-var border_l = 320 - (current_width/2);
-var border_r = 320 + (current_width/2);
-var border_u = 384 - current_height;
-var border_d = 384;
+// Evento DRAW de obj_bulletboard (CORREGIDO)
 
-obj_soul.x = clamp(obj_soul.x, border_l+8, border_r-8);
-obj_soul.y = clamp(obj_soul.y, border_u+8, border_d-8);
+// --- DIBUJA EL CUADRO DE BATALLA ---
+var box_center_x = 400; // Centro de la pantalla
+var box_center_y = 300; // Centro de la pantalla
+
+// (Asegúrate de que global.border_width y global.border_height sean iguales, ej. 150)
+var border_l = box_center_x - (global.border_width / 2);
+var border_r = box_center_x + (global.border_width / 2);
+var border_u = box_center_y - (global.border_height / 2);
+var border_d = box_center_y + (global.border_height / 2);
 
 draw_set_color(c_white);
-draw_rectangle(border_l - 4, border_u - 4, border_r + 4, border_d + 4, false);
-draw_set_color(c_black);
-draw_rectangle(border_l, border_u, border_r, border_d, false);
+// Dibuja el borde exterior
+draw_rectangle(border_l - 2, border_u - 2, border_r + 2, border_d + 2, true); // 'true' para solo el borde
 
-// ----------------- Barra de vida -----------------
-var hp_barwidth     = global.player_max_hp * 2;     // *2 para que sea más larga
-var hp_fillwidth    = global.player_hp * 2;
+// Dibuja el borde interior (si quieres un borde doble)
+draw_rectangle(border_l, border_u, border_r, border_d, true); // 'true' para solo el borde
+
+
+// --- DIBUJA LA INTERFAZ DEL JUGADOR (STATS) ---
+var ui_y = 440; // Posición Y para la barra de stats
 
 // Texto
-draw_set_font(fnt_BattleStats);
+draw_set_font(fnt_BattleStats); // Asegúrate de que esta fuente exista
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
 draw_set_color(c_white);
 
-// Nombre y nivel (pegados a la izquierda)
-draw_text(50, 400, global.name);
-draw_text(150, 400, "LV " + string(global.player_lv));
+// Nombre y Nivel
+draw_text(32, ui_y, global.name);
+draw_text(130, ui_y, "LV " + string(global.player_lv));
 
-// HP (etiqueta y números)
-draw_text(250, 400, "HP");
-draw_text(310 + hp_barwidth, 400, string(global.player_hp) + "/" + string(global.player_max_hp));
+// HP
+var hp_x = 220;
+var hp_bar_width = global.player_max_hp * 2;
+var hp_fill_width = global.player_hp * 2;
 
-// Barra
-draw_set_color(c_red);
-draw_rectangle(300, 400, 300 + hp_barwidth, 418, false);
+draw_text(hp_x, ui_y, "HP");
 
+// Barra de vida
 draw_set_color(c_yellow);
-draw_rectangle(300, 400, 300 + hp_fillwidth, 418, false);
+draw_rectangle(hp_x + 40, ui_y - 8, hp_x + 40 + hp_fill_width, ui_y + 8, false); // Relleno amarillo
+draw_set_color(c_white);
+draw_rectangle(hp_x + 40, ui_y - 8, hp_x + 40 + hp_bar_width, ui_y + 8, true); // Borde blanco
+
+// Números de HP
+draw_text(hp_x + 50 + hp_bar_width, ui_y, string(global.player_hp) + "/" + string(global.player_max_hp));
