@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Enemi_Tutorial",
-    "path":"folders/Sprites/Enemi_Tutorial.yy",
+    "name":"Enemys",
+    "path":"folders/Battle_System/Sprites/Enemys.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
