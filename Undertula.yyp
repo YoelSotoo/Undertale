@@ -176,12 +176,12 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Rm_Ruins_Tutorial","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},},
+    {"roomId":{"name":"Rm_Ruins_Inicio_2","path":"rooms/Rm_Ruins_Inicio_2/Rm_Ruins_Inicio_2.yy",},},
+    {"roomId":{"name":"Rm_Ruins_Inicio","path":"rooms/Rm_Ruins_Inicio/Rm_Ruins_Inicio.yy",},},
     {"roomId":{"name":"Shop","path":"rooms/Shop/Shop.yy",},},
     {"roomId":{"name":"rm_carreratest","path":"rooms/rm_carreratest/rm_carreratest.yy",},},
-    {"roomId":{"name":"Rm_Ruins_Tutorial","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},},
     {"roomId":{"name":"rm_Battle","path":"rooms/rm_Battle/rm_Battle.yy",},},
-    {"roomId":{"name":"Rm_Ruins_Inicio","path":"rooms/Rm_Ruins_Inicio/Rm_Ruins_Inicio.yy",},},
-    {"roomId":{"name":"Rm_Ruins_Inicio_2","path":"rooms/Rm_Ruins_Inicio_2/Rm_Ruins_Inicio_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
