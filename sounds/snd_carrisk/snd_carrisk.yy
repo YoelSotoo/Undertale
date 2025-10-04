@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_carrisk",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.8129932,
+  "name":"snd_carrisk",
+  "parent":{
+    "name":"snds_carrisk_minigame",
+    "path":"folders/Sounds/snds_carrisk_minigame.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_carrisk.mp3",
+  "type":0,
+  "volume":0.21,
+}
