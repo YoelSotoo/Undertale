@@ -12,8 +12,8 @@
   "duration":3.5520182,
   "name":"snd_cuentaregresiva",
   "parent":{
-    "name":"snds_carrisk_minigame",
-    "path":"folders/Sounds/snds_carrisk_minigame.yy",
+    "name":"Sonidos_Minujuego_Carro",
+    "path":"folders/Sounds/Sonidos_Minujuego_Carro.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

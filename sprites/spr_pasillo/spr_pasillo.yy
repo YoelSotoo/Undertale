@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"sprs_carrisk_minijuego",
-    "path":"folders/Sprites/sprs_carrisk_minijuego.yy",
+    "name":"Sprites_Minijuego_Carro",
+    "path":"folders/Sprites/Sprites_Minijuego_Carro.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

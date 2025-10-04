@@ -23,8 +23,8 @@
   ],
   "name":"rm_carreratest",
   "parent":{
-    "name":"Minijuego",
-    "path":"folders/Rooms/Minijuego.yy",
+    "name":"Room_Minijuego_Carro",
+    "path":"folders/Rooms/Room_Minijuego_Carro.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

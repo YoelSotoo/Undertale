@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_seleccionar",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.30147392,
+  "name":"snd_seleccionar",
+  "parent":{
+    "name":"Sonidos_Shops",
+    "path":"folders/Sounds/Sonidos_Shops.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_seleccionar.mp3",
+  "type":0,
+  "volume":1.0,
+}

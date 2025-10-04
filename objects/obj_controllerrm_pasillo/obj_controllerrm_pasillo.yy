@@ -10,8 +10,8 @@
   "name":"obj_controllerrm_pasillo",
   "overriddenProperties":[],
   "parent":{
-    "name":"objs_carrisk_minigame",
-    "path":"folders/Objects/objs_carrisk_minigame.yy",
+    "name":"Objetos_Minijuego_Carro",
+    "path":"folders/Objects/Objetos_Minijuego_Carro.yy",
   },
   "parentObjectId":null,
   "persistent":false,
