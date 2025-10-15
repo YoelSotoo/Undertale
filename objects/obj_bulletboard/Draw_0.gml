@@ -1,14 +1,16 @@
 // Evento DRAW de obj_bulletboard (CORREGIDO)
 
 // --- DIBUJA EL CUADRO DE BATALLA ---
-var box_center_x = 400; // Centro de la pantalla
-var box_center_y = 300; // Centro de la pantalla
+var box_center_x = room_width / 2;
+var box_center_y = room_height / 2;
+
 
 // (Asegúrate de que global.border_width y global.border_height sean iguales, ej. 150)
 var border_l = box_center_x - (global.border_width / 2);
 var border_r = box_center_x + (global.border_width / 2);
 var border_u = box_center_y - (global.border_height / 2);
 var border_d = box_center_y + (global.border_height / 2);
+
 
 draw_set_color(c_white);
 // Dibuja el borde exterior
