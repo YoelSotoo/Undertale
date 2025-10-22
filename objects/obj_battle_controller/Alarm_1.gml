@@ -1,14 +1,7 @@
-//-------------------------------------
-// EVENTO ALARM[1] - obj_battle_controller
-//-------------------------------------
+// Crear proyectil desde la posición real del enemigo
+var b = instance_create_layer(enemy_x, enemy_y, "Instances", obj_proyectil_enemy);
+b.damage  = enemy_bullet_damage; // pasamos daño
+b.pattern = enemy_pattern;       // por si quieres variar comportamiento
 
-// Crear una bala enemiga simple (ataque de prueba)
-var bx = 545;
-var by = 256;
-instance_create_layer(bx, by, "Instances", obj_enemy_bullet);
-
-// Cambiar al estado de ataque
 state = "ENEMY_ATTACKING";
-
-// Esperar 1.5 segundos antes de devolver el turno al jugador
-alarm[0] = room_speed * 1.5;
+alarm[0] = room_speed * 1.5; // duración del ataque

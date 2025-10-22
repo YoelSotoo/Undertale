@@ -1,14 +1,8 @@
-// Determinar tipo de enemigo actual y crear su proyectil
-switch (global.current_enemy) {
-    case obj_Enemy: // ejemplo: maniquí furioso
-        instance_create_layer(545, 256, "Instances", obj_proyectil_enemy);
-    break;
+// Movimiento básico
+x += lengthdir_x(speed, direction);
+y += lengthdir_y(speed, direction);
 
-    // Aquí puedes agregar otros enemigos con distintos ataques
-    // case obj_Ghost:
-    //     instance_create_layer(545, 256, "Instances", obj_proyectil_ghost);
-    // break;
+// Si sale del área, destrúyelo
+if (x < 0 || x > room_width || y < 0 || y > room_height) {
+    instance_destroy();
 }
-
-// Destruye el controlador después de lanzar
-instance_destroy();

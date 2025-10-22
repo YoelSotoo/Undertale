@@ -1,24 +1,28 @@
-// Movimiento
+//-------------------------------------
+// STEP EVENT
+//-------------------------------------
+
+// Movimiento del proyectil
 x += lengthdir_x(speed, direction);
 y += lengthdir_y(speed, direction);
 
-// Colisión con el alma
-if (instance_exists(obj_soul) && place_meeting(x, y, obj_soul)) {
-
-    if (global.inv_frames <= 0) {
-        global.player_hp -= 3;
-        if (global.player_hp < 0) global.player_hp = 0;
-
-        global.inv_frames = 40;
-        with (obj_soul) {
-            flash_timer = 10;
-        }
-    }
-
+// Se destruye si sale del room o pasa mucho tiempo
+life_timer--;
+if (life_timer <= 0 || x < 0 || x > room_width || y < 0 || y > room_height) {
     instance_destroy();
 }
 
-// Si sale del room, destruir
-if (x < 0 || x > room_width || y < 0 || y > room_height) {
-    instance_destroy();
+// Colisión manual con el alma
+if (instance_exists(global.soul_id) && global.inv_frames <= 0) {
+    var dist = point_distance(x, y, global.soul_id.x, global.soul_id.y);
+    if (dist < 10) { // rango de impacto
+        global.player_hp -= damage;
+        global.inv_frames = room_speed / 2; // medio segundo de invulnerabilidad
+
+        with (obj_battle_controller) {
+            enemy_flash_timer = 5;
+        }
+
+        instance_destroy();
+    }
 }

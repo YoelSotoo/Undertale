@@ -1,16 +1,9 @@
-// --- Turno del enemigo ---
-enemy_turn = true;
-
-// --- Efecto visual (tiembla y parpadea el enemigo) ---
-with (obj_battle_controller) {
-    enemy_flash_timer = 5;
-    enemy_shake_timer = 8;
-
-    // Crea una bala enemiga simple
-    var bx = 545;
-    var by = 256;
-    instance_create_layer(bx, by, "Instances", obj_enemy_bullet);
+//-------------------------------------
+// ALARM[1] - iniciar turno enemigo
+//-------------------------------------
+if (instance_exists(obj_battle_controller)) {
+    with (obj_battle_controller) {
+        state = "ENEMY_TURN";
+    }
 }
-
-// Espera medio segundo antes de devolver el turno al jugador
-alarm[2] = room_speed * 0.5;
+attack_done = true; // marcar para destruirse
