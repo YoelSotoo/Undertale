@@ -35,29 +35,40 @@ if (global.UISelectionMenu > -1) {
     }
     
     // --- LÓGICA DE SELECCIÓN (tecla Z) ---
-    if (keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter)) {
-        
-        switch (global.BattleMenu) {
-            
-            // --- Caso 0: Menú Principal ---
-            case 0:
-                global.BattleMenu = (global.UISelectionMenu + 1);
-                BelowUIReferenceNum = global.UISelectionMenu;
-                global.UISelectionMenu = 0;
-                break;
-            
-            // --- Caso 1: FIGHT ---
-            case 1:
-                MonsterReferenceNum = global.UISelectionMenu;
-                global.BattleMenu = 1.5;
-                global.UISelectionMenu = -1;
-                // Aquí activaremos nuestro obj_fight_minigame
-                if (!instance_exists(obj_fight_minigame)) {
-                    instance_create_layer(0, 0, "Instances", obj_fight_minigame);
-                }
-                break;
+    // --- LÓGICA DE SELECCIÓN (tecla Z) ---
+	if (keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter)) {
 
-            // (El resto de los 'case' para ACT, ITEM, etc., va aquí)
-        }
+		switch (global.BattleMenu) {
+
+        // --- Caso 0: Menú Principal ---
+			case 0:
+            // Si está seleccionado FIGHT (el primer botón)
+	            if (global.UISelectionMenu == 0) {
+	                // Ir directo al minijuego
+	                global.BattleMenu = 1.5;
+	                global.UISelectionMenu = -1;
+	                with (obj_battle_controller) {
+	                    state = "FIGHT_MINIGAME";
+	                }
+	                if (!instance_exists(obj_fight_minigame)) {
+	                    instance_create_layer(0, 0, "Instances", obj_fight_minigame);
+	                }
+	            }
+	            else {
+	                // Si no es FIGHT, simplemente cambia de menú como antes
+	                global.BattleMenu = (global.UISelectionMenu + 1);
+	                BelowUIReferenceNum = global.UISelectionMenu;
+	                global.UISelectionMenu = 0;
+	            }
+	       break;
+
+        // --- Caso 1: FIGHT (ya dentro del minijuego) ---
+        case 1:
+            // (mantén este vacío o elimina, ya no se usará)
+        break;
+
+        // --- Aquí puedes añadir ACT, ITEM, etc. ---
     }
+}
+
 }
