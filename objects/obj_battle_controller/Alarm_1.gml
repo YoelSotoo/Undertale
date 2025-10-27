@@ -1,7 +1,20 @@
-// Crear proyectil desde la posición real del enemigo
-var b = instance_create_layer(enemy_x, enemy_y, "Instances", obj_proyectil_enemy);
-b.damage  = enemy_bullet_damage; // pasamos daño
-b.pattern = enemy_pattern;       // por si quieres variar comportamiento
+// Ocultar alma
+if (instance_exists(global.soul_id)) {
+    global.soul_id.visible = false;
+    with (global.soul_id) {
+        x = room_width/2; // Resetear posición
+        y = room_height/2;
+        flash_timer = 0;
+    }
+}
 
-state = "ENEMY_ATTACKING";
-alarm[0] = room_speed * 1.5; // duración del ataque
+// Reiniciar invulnerabilidad
+global.inv_frames = 0;
+
+// Destruir proyectiles restantes
+with (obj_proyectil_enemy) {
+    instance_destroy();
+}
+
+// Volver al turno del jugador
+global.turn_state = "PLAYER_TURN";

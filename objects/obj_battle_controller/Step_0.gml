@@ -1,22 +1,38 @@
-switch (state) {
-    case "PLAYER_TURN": break;
+// Controlar efectos visuales
+if (enemy_shake_timer > 0) enemy_shake_timer--;
+if (enemy_flash_timer > 0) enemy_flash_timer--;
 
-    case "FIGHT_MINIGAME":
+// Lógica principal de estados
+switch (global.turn_state) {
+    case "PLAYER_TURN":
+        // Menú activo - alma oculta
+        if (instance_exists(global.soul_id)) 
+            global.soul_id.visible = false;
+        break;
+        
+    case "PLAYER_ATTACK": // Cambié FIGHT_MINIGAME por nombre más claro
+        // Minijuego activo
         if (!instance_exists(obj_fight_minigame)) {
+            // Crear minijuego si no existe
             var mini = instance_create_layer(0, 0, "Instances", obj_fight_minigame);
-            mini.controller_id = id; // MUY IMPORTANTE para que el minijuego lea enemy_x/y
+            mini.controller_id = id;
+        } else {
+            // Esperar a que el minijuego termine (se destruya)
+            // El minijuego debe cambiar global.turn_state cuando termine
         }
-        if (!instance_exists(obj_fight_minigame)) {
-            state = "ENEMY_TURN";
-        }
-    break;
-
+        break;
+        
     case "ENEMY_TURN":
-        if (instance_exists(global.soul_id)) global.soul_id.visible = true;
-        alarm[1] = 1; // damos 1 frame para que el alma "vea" ENEMY_TURN
-    break;
-
+		 if (instance_exists(global.soul_id)) global.soul_id.visible = true;
+    
+    // Crear el generador de balas (solo una vez)
+		 if (!instance_exists(obj_BulletGenerator)) {
+			 instance_create_layer(0, 0, "Instances", obj_BulletGenerator);
+		  }
+			break;
+        
     case "ENEMY_ATTACKING":
-        // esperar alarm[0]
-    break;
+        // El ataque ya está en progreso, esperar que termine
+        // La alarma controla el fin del turno
+        break;
 }

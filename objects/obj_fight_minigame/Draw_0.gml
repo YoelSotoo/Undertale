@@ -1,7 +1,3 @@
-//-------------------------------------
-// DRAW - obj_fight_minigame (con depth corregido)
-//-------------------------------------
-
 // 🟢 Barra base
 draw_sprite(spr_barra_f, 0, 96, 384);
 
@@ -10,7 +6,7 @@ if (can_press) {
     draw_sprite(spr_barra_f2, 0, 96 + cursor_pos_relative, 384);
 }
 
-// ⚡ Dibuja la animación del golpe **al frente**
+// ⚡ Animación del golpe (versión simplificada)
 if (hit_anim_frame > -1) {
     var gx = 545;
     var gy = 250;
@@ -19,25 +15,9 @@ if (hit_anim_frame > -1) {
         gx = controller_id.enemy_x;
         gy = controller_id.enemy_y - 6;
     }
-
-    // ⚙️ Dibujar en superficie temporal (truco de prioridad visual)
-    var _surf = surface_create(room_width, room_height);
-    surface_set_target(_surf);
-    draw_clear_alpha(c_black, 0);
-
-    // Dibuja el golpe en esa superficie
+    
+    // Dibujar directamente con alta profundidad
     draw_sprite_ext(spr_hit_dmg, floor(hit_anim_frame), gx, gy, 2, 2, 0, c_white, 1);
-
-    // Restaurar dibujo y colocar la superficie encima
-    surface_reset_target();
-    draw_surface(_surf, 0, 0);
-    surface_free(_surf);
-
-    // Avanza frame de la animación
-    hit_anim_frame += hit_anim_speed;
-    if (hit_anim_frame >= sprite_get_number(spr_hit_dmg)) {
-        hit_anim_frame = -1;
-    }
 }
 
 // 🟡 Texto de daño

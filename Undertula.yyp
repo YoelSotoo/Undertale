@@ -83,6 +83,7 @@
     {"id":{"name":"obj_battle_controller","path":"objects/obj_battle_controller/obj_battle_controller.yy",},},
     {"id":{"name":"obj_battle_HUD","path":"objects/obj_battle_HUD/obj_battle_HUD.yy",},},
     {"id":{"name":"obj_bulletboard","path":"objects/obj_bulletboard/obj_bulletboard.yy",},},
+    {"id":{"name":"obj_BulletGenerator","path":"objects/obj_BulletGenerator/obj_BulletGenerator.yy",},},
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
     {"id":{"name":"obj_ButtonController","path":"objects/obj_ButtonController/obj_ButtonController.yy",},},
     {"id":{"name":"obj_carrisk","path":"objects/obj_carrisk/obj_carrisk.yy",},},

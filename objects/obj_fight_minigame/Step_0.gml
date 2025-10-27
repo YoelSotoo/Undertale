@@ -1,7 +1,3 @@
-//-------------------------------------
-// STEP - obj_fight_minigame
-//-------------------------------------
-
 // Retraso inicial
 if (input_delay > 0) {
     input_delay--;
@@ -43,6 +39,14 @@ if (can_press) {
         // --- Alarmas ---
         alarm[0] = room_speed * 0.5; // limpia texto
         alarm[1] = room_speed * 1;   // pasa turno enemigo
+    }
+}
+
+// Avanzar animación del golpe
+if (hit_anim_frame > -1) {
+    hit_anim_frame += hit_anim_speed;
+    if (hit_anim_frame >= sprite_get_number(spr_hit_dmg)) {
+        hit_anim_frame = -1;
     }
 }
 

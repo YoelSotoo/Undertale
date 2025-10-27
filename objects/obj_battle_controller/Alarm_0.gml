@@ -1,13 +1,10 @@
-// Termina el turno del enemigo
-if (instance_exists(global.soul_id)) {
-    global.soul_id.visible = false;
-    with (global.soul_id) {
-        flash_timer = 0;
-    }
-}
+// Crear primer proyectil
+var b = instance_create_layer(enemy_x, enemy_y, "Instances", obj_proyectil_enemy);
+b.damage = enemy_bullet_damage;
+b.pattern = enemy_pattern;
 
-// Reiniciar invulnerabilidad
-global.inv_frames = 0;
+// Cambiar a estado de ataque
+global.turn_state = "ENEMY_ATTACKING";
 
-// Vuelve al turno del jugador
-state = "PLAYER_TURN";
+// Programar fin del turno enemigo
+alarm[1] = enemy_attack_duration;
