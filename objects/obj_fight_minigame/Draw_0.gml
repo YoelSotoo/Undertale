@@ -1,9 +1,9 @@
 // 🟢 Barra base
-draw_sprite(spr_barra_f, 0, 96, 384);
+draw_sprite(spr_barra_f, 0, 96, 370);
 
 // 🟢 Cursor
 if (can_press) {
-    draw_sprite(spr_barra_f2, 0, 96 + cursor_pos_relative, 384);
+    draw_sprite(spr_barra_f2, 0, 96 + cursor_pos_relative, 370);
 }
 
 // ⚡ Animación del golpe (versión simplificada)
