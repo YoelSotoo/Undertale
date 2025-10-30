@@ -1,26 +1,26 @@
 // Solo activo durante turno enemigo
 if (global.turn_state == "ENEMY_TURN" || global.turn_state == "ENEMY_ATTACKING") {
     
-    // Crear proyectiles (solo una vez)
+    pattern_timer++;
+    
+    // Crear proyectiles con diferentes patrones
     if (!bullets_created) {
-        // CREAR PROYECTILES DIRECTAMENTE AQUÍ
         var battle = instance_find(obj_battle_controller, 0);
-        if (instance_exists(battle)) {
-            for (var i = 0; i < 5; i++) {
-                var b = instance_create_layer(battle.enemy_x, battle.enemy_y, "Instances", obj_proyectil_enemy);
-                b.damage = battle.enemy_bullet_damage;
-                b.pattern = "basic";
-                b.alarm[0] = i * 30; // Delay escalonado
-            }
-        }
+        scr_create_bullet_pattern(battle, battle.enemy_pattern, pattern_timer);
         bullets_created = true;
         global.turn_state = "ENEMY_ATTACKING";
+    }
+    
+    // Crear nuevas oleadas de proyectiles (para patrones continuos)
+    if (pattern_timer mod 60 == 0 && wave_count < 3) { // Nueva oleada cada segundo
+        var battle = instance_find(obj_battle_controller, 0);
+        scr_create_bullet_pattern(battle, battle.enemy_pattern, pattern_timer);
+        wave_count++;
     }
     
     // Controlar fin del ataque
     attack_timer--;
     if (attack_timer <= 0) {
-        // TERMINAR TURNO ENEMIGO DIRECTAMENTE AQUÍ
         global.turn_state = "PLAYER_TURN";
         global.BattleMenu = 0;
         global.UISelectionMenu = 0;
@@ -29,10 +29,9 @@ if (global.turn_state == "ENEMY_TURN" || global.turn_state == "ENEMY_ATTACKING")
             global.soul_id.visible = false;
         }
         
-        instance_destroy(); // Destruir este generador
+        instance_destroy();
     }
     
 } else {
-    // Si no es turno enemigo, destruirse
     instance_destroy();
 }

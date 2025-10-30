@@ -6,6 +6,7 @@ damage = 5;             // daño base
 speed = 4;              // velocidad de movimiento
 depth = -50;            // que se vea por encima del cuadro
 image_blend = c_white;
+pattern = "basic";      // ← ¡ESTA LÍNEA FALTABA!
 
 // Calcular dirección hacia el alma
 if (instance_exists(global.soul_id)) {
