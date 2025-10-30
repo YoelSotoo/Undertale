@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"spr_Fight",
-    "path":"folders/Battle_System/Sprites/spr_Fight.yy",
+    "name":"ENEMY_1",
+    "path":"folders/Battle_System/Sprites/Enemys/ENEMY_1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
