@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_should_create_wave",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_should_create_wave",
+  "parent":{
+    "name":"SCRS",
+    "path":"folders/Battle_System/SCRS.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

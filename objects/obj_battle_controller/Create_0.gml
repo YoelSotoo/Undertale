@@ -6,6 +6,7 @@ image_speed = 0.1;
 enemy_sprite  = noone;
 enemy_x = 545;
 enemy_y = 256;
+available_patterns = ["basic", "basic_5", "circle", "rain"];
 enemy_pattern = "basic";
 enemy_bullet_damage = 4;
 

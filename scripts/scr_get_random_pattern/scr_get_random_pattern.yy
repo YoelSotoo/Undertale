@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_get_random_pattern",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_get_random_pattern",
+  "parent":{
+    "name":"SCRS",
+    "path":"folders/Battle_System/SCRS.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

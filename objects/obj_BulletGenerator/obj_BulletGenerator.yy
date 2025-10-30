@@ -9,8 +9,8 @@
   "name":"obj_BulletGenerator",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Battle_System/Objects.yy",
+    "name":"Ataques enemigos",
+    "path":"folders/Battle_System/Objects/Ataques enemigos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
