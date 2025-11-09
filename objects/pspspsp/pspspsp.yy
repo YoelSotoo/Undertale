@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mascota",
+  "%Name":"pspspsp",
   "eventList":[],
   "managed":true,
-  "name":"obj_mascota",
+  "name":"pspspsp",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map",
-    "path":"folders/Objects/obj_tutorial/Map.yy",
+    "name":"mascota",
+    "path":"folders/Objects/obj_tutorial/Map/mascota.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mascota",
-    "path":"sprites/spr_mascota/spr_mascota.yy",
+    "name":"spr_pspspss",
+    "path":"sprites/spr_pspspss/spr_pspspss.yy",
   },
   "spriteMaskId":null,
   "visible":true,
