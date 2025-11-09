@@ -84,6 +84,7 @@
     {"id":{"name":"fnt_tutorial","path":"fonts/fnt_tutorial/fnt_tutorial.yy",},},
     {"id":{"name":"font_cuentaregresiva","path":"fonts/font_cuentaregresiva/font_cuentaregresiva.yy",},},
     {"id":{"name":"font_tienda","path":"fonts/font_tienda/font_tienda.yy",},},
+    {"id":{"name":"chillon","path":"objects/chillon/chillon.yy",},},
     {"id":{"name":"menealo","path":"objects/menealo/menealo.yy",},},
     {"id":{"name":"miau","path":"objects/miau/miau.yy",},},
     {"id":{"name":"obj_agua","path":"objects/obj_agua/obj_agua.yy",},},
@@ -167,6 +168,7 @@
     {"id":{"name":"spr_carretera","path":"sprites/spr_carretera/spr_carretera.yy",},},
     {"id":{"name":"spr_carrisk","path":"sprites/spr_carrisk/spr_carrisk.yy",},},
     {"id":{"name":"spr_Cartel","path":"sprites/spr_Cartel/spr_Cartel.yy",},},
+    {"id":{"name":"spr_chillon","path":"sprites/spr_chillon/spr_chillon.yy",},},
     {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},},
     {"id":{"name":"spr_elweydelatienda","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},},
     {"id":{"name":"spr_elweydelatienda1","path":"sprites/spr_elweydelatienda1/spr_elweydelatienda1.yy",},},
@@ -232,6 +234,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_lab4","path":"rooms/rm_lab4/rm_lab4.yy",},},
     {"roomId":{"name":"rm_lab3","path":"rooms/rm_lab3/rm_lab3.yy",},},
     {"roomId":{"name":"rm_inicioLab","path":"rooms/rm_inicioLab/rm_inicioLab.yy",},},
     {"roomId":{"name":"Rm_Ruins_Tutorial","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},},
@@ -244,7 +247,6 @@
     {"roomId":{"name":"rm_lab2","path":"rooms/rm_lab2/rm_lab2.yy",},},
     {"roomId":{"name":"rm_labFinal","path":"rooms/rm_labFinal/rm_labFinal.yy",},},
     {"roomId":{"name":"rm_lab5","path":"rooms/rm_lab5/rm_lab5.yy",},},
-    {"roomId":{"name":"rm_lab4","path":"rooms/rm_lab4/rm_lab4.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
