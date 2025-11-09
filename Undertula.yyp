@@ -234,6 +234,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_labFinal","path":"rooms/rm_labFinal/rm_labFinal.yy",},},
     {"roomId":{"name":"rm_lab4","path":"rooms/rm_lab4/rm_lab4.yy",},},
     {"roomId":{"name":"rm_lab3","path":"rooms/rm_lab3/rm_lab3.yy",},},
     {"roomId":{"name":"rm_inicioLab","path":"rooms/rm_inicioLab/rm_inicioLab.yy",},},
@@ -245,7 +246,6 @@
     {"roomId":{"name":"rm_Battle","path":"rooms/rm_Battle/rm_Battle.yy",},},
     {"roomId":{"name":"rm_lab1","path":"rooms/rm_lab1/rm_lab1.yy",},},
     {"roomId":{"name":"rm_lab2","path":"rooms/rm_lab2/rm_lab2.yy",},},
-    {"roomId":{"name":"rm_labFinal","path":"rooms/rm_labFinal/rm_labFinal.yy",},},
     {"roomId":{"name":"rm_lab5","path":"rooms/rm_lab5/rm_lab5.yy",},},
   ],
   "templateType":"game",
