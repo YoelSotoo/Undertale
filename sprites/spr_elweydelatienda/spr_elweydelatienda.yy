@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_elweydelatienda",
   "bboxMode":0,
   "bbox_bottom":275,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"25fef565-e9e8-488b-8597-38a389292005","name":"25fef565-e9e8-488b-8597-38a389292005","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"faeb278d-91a2-457d-9312-ffbbd42d1575","name":"faeb278d-91a2-457d-9312-ffbbd42d1575","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cfaef41d-530f-4fab-8c16-47d62a81dbc7","name":"cfaef41d-530f-4fab-8c16-47d62a81dbc7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0f1d8e5b-2546-4429-8fdd-19af320a686c","name":"0f1d8e5b-2546-4429-8fdd-19af320a686c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"60d960c3-3726-466a-81b7-446a6bc8f97f","name":"60d960c3-3726-466a-81b7-446a6bc8f97f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"232f7bd1-3cfc-4082-84dd-5c097cccc3d6","name":"232f7bd1-3cfc-4082-84dd-5c097cccc3d6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2d28ca73-83e3-412b-b74f-41df8fdfa823","name":"2d28ca73-83e3-412b-b74f-41df8fdfa823","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"25fef565-e9e8-488b-8597-38a389292005","name":"25fef565-e9e8-488b-8597-38a389292005","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"faeb278d-91a2-457d-9312-ffbbd42d1575","name":"faeb278d-91a2-457d-9312-ffbbd42d1575","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cfaef41d-530f-4fab-8c16-47d62a81dbc7","name":"cfaef41d-530f-4fab-8c16-47d62a81dbc7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0f1d8e5b-2546-4429-8fdd-19af320a686c","name":"0f1d8e5b-2546-4429-8fdd-19af320a686c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"60d960c3-3726-466a-81b7-446a6bc8f97f","name":"60d960c3-3726-466a-81b7-446a6bc8f97f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"232f7bd1-3cfc-4082-84dd-5c097cccc3d6","name":"232f7bd1-3cfc-4082-84dd-5c097cccc3d6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2d28ca73-83e3-412b-b74f-41df8fdfa823","name":"2d28ca73-83e3-412b-b74f-41df8fdfa823","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -76,27 +76,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25fef565-e9e8-488b-8597-38a389292005","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"287883a7-8a32-4d2a-833e-591b4d1febd0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"faeb278d-91a2-457d-9312-ffbbd42d1575","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ed46e467-0040-4ef4-ae3a-fd751eec582c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cfaef41d-530f-4fab-8c16-47d62a81dbc7","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"69976f31-e51e-4197-8712-0a42a6eaa19b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f1d8e5b-2546-4429-8fdd-19af320a686c","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d4e7811f-e80a-4e95-9cd6-d63eb0e0f14d","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"60d960c3-3726-466a-81b7-446a6bc8f97f","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bcd26db1-16e2-4307-aecb-96021fb73473","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"232f7bd1-3cfc-4082-84dd-5c097cccc3d6","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"def91135-28b8-426d-8035-81a4c48ecdaa","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d28ca73-83e3-412b-b74f-41df8fdfa823","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"34f65217-c8f8-43c3-bc10-1c237ad9af20","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"25fef565-e9e8-488b-8597-38a389292005","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"287883a7-8a32-4d2a-833e-591b4d1febd0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"faeb278d-91a2-457d-9312-ffbbd42d1575","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ed46e467-0040-4ef4-ae3a-fd751eec582c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cfaef41d-530f-4fab-8c16-47d62a81dbc7","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"69976f31-e51e-4197-8712-0a42a6eaa19b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f1d8e5b-2546-4429-8fdd-19af320a686c","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d4e7811f-e80a-4e95-9cd6-d63eb0e0f14d","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"60d960c3-3726-466a-81b7-446a6bc8f97f","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bcd26db1-16e2-4307-aecb-96021fb73473","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"232f7bd1-3cfc-4082-84dd-5c097cccc3d6","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"def91135-28b8-426d-8035-81a4c48ecdaa","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d28ca73-83e3-412b-b74f-41df8fdfa823","path":"sprites/spr_elweydelatienda/spr_elweydelatienda.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"34f65217-c8f8-43c3-bc10-1c237ad9af20","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
