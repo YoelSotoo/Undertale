@@ -1,4 +1,4 @@
-// =================== INPUT Y POSICIÓN ===================
+snd// =================== INPUT Y POSICIÓN ===================
 var confirm_key = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 var skip_key = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shift);
 

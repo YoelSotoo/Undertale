@@ -165,6 +165,7 @@
     {"id":{"name":"snd_cuentaregresiva","path":"sounds/snd_cuentaregresiva/snd_cuentaregresiva.yy",},},
     {"id":{"name":"snd_Dummy","path":"sounds/snd_Dummy/snd_Dummy.yy",},},
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},},
+    {"id":{"name":"snd_fondominijuego","path":"sounds/snd_fondominijuego/snd_fondominijuego.yy",},},
     {"id":{"name":"snd_jump","path":"sounds/snd_jump/snd_jump.yy",},},
     {"id":{"name":"snd_laberinto","path":"sounds/snd_laberinto/snd_laberinto.yy",},},
     {"id":{"name":"snd_maniqui","path":"sounds/snd_maniqui/snd_maniqui.yy",},},
