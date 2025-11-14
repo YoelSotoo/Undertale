@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Scr_add_inventario",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Scr_add_inventario",
+  "parent":{
+    "name":"Inventario",
+    "path":"folders/Scripts/Inventario.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

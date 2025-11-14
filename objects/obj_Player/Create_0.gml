@@ -8,4 +8,8 @@ can_move = true;
 walk_spd = 1.4;
 run_spd = 2.3;
 
+global.inventory_open = false;
+global.player_hp = 20;
+
 //asi es la vida asi tan complicada
+//juanxho estubo aki

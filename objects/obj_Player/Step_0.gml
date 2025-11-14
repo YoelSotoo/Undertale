@@ -74,3 +74,9 @@ else {
     image_speed = 0; // Detenemos la animación
     image_index = 0; // La reiniciamos al primer frame
 }
+
+if (global.inventory_open) {
+    can_move = false;
+    exit;
+}
+can_move = true;

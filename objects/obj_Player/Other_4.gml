@@ -24,3 +24,16 @@ if (variable_global_exists("next_spawn")) {
     // Limpiar variable global
     global.next_spawn = "";
 }
+
+	//Restaurar las coordenadas solo una vez
+if (global.just_loaded && variable_global_exists("load_data")) {
+    var data = global.load_data;
+
+    if (room == data.room) {
+        x = data.x;
+        y = data.y;
+
+        //Solo una vez
+        global.just_loaded = false;
+    }
+}

@@ -40,4 +40,6 @@ enemy_flash_timer = 0;
 
 // Temporizador de ataque enemigo
 enemy_attack_duration = 90; // 1.5 segundos
+audio_play_sound(snd_rudebuster, 1, true);
+
 

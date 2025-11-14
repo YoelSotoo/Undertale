@@ -11,9 +11,11 @@ if (global.UISelectionMenu > -1) {
         // Navegación con flechas
         if (keyboard_check_pressed(vk_left)) {
             global.UISelectionMenu -= 1;
+			audio_play_sound(snd_seleccionar, 1, false);
         }
         if (keyboard_check_pressed(vk_right)) {
             global.UISelectionMenu += 1;
+			audio_play_sound(snd_seleccionar, 1, false);
         }
         
         // Mantiene la selección dentro del número real de botones que tienes
@@ -33,7 +35,7 @@ if (global.UISelectionMenu > -1) {
     
     // --- LÓGICA DE SELECCIÓN (tecla Z) --- CORREGIDA
     if (keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter)) {
-
+		
         switch (global.BattleMenu) {
 
             // --- Caso 0: Menú Principal --- CORREGIDO

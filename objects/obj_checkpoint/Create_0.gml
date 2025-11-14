@@ -1,0 +1,1 @@
+activo = false; // para saber si está mostrando el menú de guardado
