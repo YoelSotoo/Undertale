@@ -1,5 +1,5 @@
 // Buscar el spawn correcto al entrar en la nueva room
-if (variable_global_exists("next_spawn")) {
+/*if (variable_global_exists("next_spawn")) {
     var spawn_name = global.next_spawn;
     var found_spawn = noone;
 

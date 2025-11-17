@@ -16,19 +16,31 @@ if (can_press) {
         can_press = false;
         hit_anim_frame = 0;
 
-        // --- Lógica de daño ---
-        var _damage = 0;
-        var _enemy_attack = 10;
+        // --- Lógica de daño --- CORREGIDA
+			var _damage = 0;
+			var _player_attack = 10; // Ataque base del jugador
 
-        if (abs(cursor_pos_relative) <= 10)
-            _damage = _enemy_attack * 2;
-        else if (abs(cursor_pos_relative) <= 30)
-            _damage = _enemy_attack * 1.5;
-        else
-            _damage = _enemy_attack * 0.5;
+			if (abs(cursor_pos_relative) <= 10)
+			    _damage = _player_attack * 2;
+			else if (abs(cursor_pos_relative) <= 30)
+			    _damage = _player_attack * 1.5;
+			else
+			    _damage = _player_attack * 0.5;
 
-        _damage = round(_damage);
-        damage_text = string(_damage);
+			_damage = round(_damage);
+			damage_text = string(_damage);
+
+			// APLICAR DAÑO AL ENEMIGO - AGREGAR ESTO
+			var battle = instance_find(obj_battle_controller, 0);
+			if (instance_exists(battle)) {
+			    battle.enemy_hp -= max(1, _damage - battle.enemy_defense);
+    
+			    // Verificar si el enemigo murió
+			    if (battle.enemy_hp <= 0) {
+			        battle.enemy_hp = 0;
+			        // Aquí luego pondremos la victoria
+			    }
+			}
 
         // Efectos en el enemigo
         with (obj_battle_controller) {

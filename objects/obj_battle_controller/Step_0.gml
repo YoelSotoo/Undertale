@@ -1,3 +1,25 @@
+// Verificar victoria
+if (enemy_hp <= 0 && global.turn_state != "BATTLE_END") {
+    global.turn_state = "BATTLE_END";
+    // Aquí irán efectos de victoria
+    show_debug_message("¡ENEMIGO DERROTADO!");
+    
+    // Ocultar alma y detener proyectiles
+    if (instance_exists(global.soul_id)) {
+        global.soul_id.visible = false;
+    }
+    
+    // Destruir todos los proyectiles
+    with (obj_proyectil_enemy) {
+        instance_destroy();
+    }
+    
+    // Destruir BulletGenerator si existe
+    if (instance_exists(obj_BulletGenerator)) {
+        instance_destroy(obj_BulletGenerator);
+    }
+}
+
 // Controlar efectos visuales
 if (enemy_shake_timer > 0) enemy_shake_timer--;
 if (enemy_flash_timer > 0) enemy_flash_timer--;

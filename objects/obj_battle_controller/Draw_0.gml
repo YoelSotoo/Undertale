@@ -19,11 +19,33 @@ if (enemy_sprite != noone) {
     }
 }
 
-// === DEBUG - AÑADIR ESTO AL FINAL ===
+// DEBUG MEJORADO
 draw_set_color(c_white);
 draw_set_halign(fa_left);
-draw_set_font(-1); // Fuente por defecto
-draw_text(10, 10, "HP: " + string(global.player_hp) + "/" + string(global.player_max_hp));
-draw_text(10, 30, "Inv Frames: " + string(global.inv_frames));
-draw_text(10, 50, "Turn State: " + string(global.turn_state));
-draw_text(10, 70, "Proyectiles: " + string(instance_number(obj_proyectil_enemy)));
+draw_set_font(-1);
+draw_text(10, 10, "Jugador HP: " + string(global.player_hp) + "/" + string(global.player_max_hp));
+draw_text(10, 30, "Enemigo HP: " + string(enemy_hp) + "/" + string(enemy_max_hp));
+draw_text(10, 50, "Inv Frames: " + string(global.inv_frames));
+draw_text(10, 70, "Turn State: " + string(global.turn_state));
+draw_text(10, 90, "Proyectiles: " + string(instance_number(obj_proyectil_enemy)));
+
+//barra de vida enemigo
+// Barra de vida del ENEMIGO
+var bar_width = 100;
+var bar_height = 8;
+var bar_x = enemy_x - bar_width/2;
+var bar_y = enemy_y - 50;
+
+// Fondo de la barra (rojo)
+draw_set_color(c_red);
+draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, false);
+
+// Vida actual (verde)
+var hp_percent = enemy_hp / enemy_max_hp;
+draw_set_color(c_lime);
+draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_percent), bar_y + bar_height, false);
+
+// Texto de HP
+draw_set_color(c_white);
+draw_set_halign(fa_center);
+draw_text(enemy_x, bar_y - 15, string(enemy_hp) + "/" + string(enemy_max_hp));

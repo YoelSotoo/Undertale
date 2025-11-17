@@ -45,6 +45,7 @@
     {"name":"inst_7C4377A6","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},
     {"name":"inst_953639F","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},
     {"name":"inst_3746A652","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},
+    {"name":"inst_5086047C","path":"rooms/Rm_Ruins_Tutorial/Rm_Ruins_Tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -89,6 +90,7 @@
       ],"layers":[],"name":"Wall","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"text","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_953639F","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_953639F","objectId":{"name":"obj_TextBoxOpenner","path":"objects/obj_TextBoxOpenner/obj_TextBoxOpenner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.9375,"scaleY":3.375,"x":126.5,"y":219.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5086047C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5086047C","objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":405.0,},
       ],"layers":[],"name":"text","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemys","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_32921545","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_32921545","objectId":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":150.0,"y":243.0,},

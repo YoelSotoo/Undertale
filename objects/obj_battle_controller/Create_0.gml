@@ -43,3 +43,7 @@ enemy_attack_duration = 90; // 1.5 segundos
 audio_play_sound(snd_rudebuster, 1, true);
 
 
+//stats enemy 
+enemy_hp = 30;
+enemy_max_hp = 30;
+enemy_defense = 5;
