@@ -43,6 +43,15 @@ attack_speed = 3; // Velocidad de la animación (cada 3 frames cambia)
 attack_x = 100;
 attack_y = 256;
 
+// Efecto de hit del jugador - VERSIÓN MEJORADA
+hit_sprite = spr_AllFight_Hit;
+is_player_hit = false;
+hit_timer = 0;
+hit_duration = 30; // ↑ MÁS LARGO (de 10 a 30 frames = 0.5 segundos)
+hit_knockback = 12; // ↓ UN POCO MENOS DE FUERZA
+hit_direction = 1;
+player_base_x = 100;
+hit_shake_speed = 0.3; // ↓ MÁS LENTO (controla la suavidad)
 // FX enemigo
 enemy_shake_timer = 0;
 enemy_shake_intensity = 10;

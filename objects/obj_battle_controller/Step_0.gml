@@ -14,6 +14,44 @@ if (is_attacking) {
         }
     }
 }
+// Controlar efecto de hit del jugador - VERSIÓN LENTA Y LARGA
+if (is_player_hit) {
+    hit_timer++;
+    
+    // Movimiento de shake más lento y prolongado
+    var progress = hit_timer / hit_duration;
+    
+    if (progress < 0.4) {
+        // Fase 1: Knockback inicial más suave
+        var target_x = player_base_x + (hit_knockback * hit_direction);
+        attack_x = lerp(attack_x, target_x, hit_shake_speed);
+    } 
+    else if (progress < 0.8) {
+        // Fase 2: Oscilación lenta de regreso
+        var oscillation = sin(hit_timer * 0.3) * 8; // ↑ MÁS LENTO
+        attack_x = player_base_x + oscillation;
+    }
+    else {
+        // Fase 3: Regreso final muy suave
+        attack_x = lerp(attack_x, player_base_x, 0.1); // ↑ MÁS SUAVE
+    }
+    
+    // Pequeño movimiento vertical sutil
+    if (progress < 0.6) {
+        var vertical_shake = sin(hit_timer * 0.4) * 3; // ↑ MÁS LENTO
+        attack_y = 256 + vertical_shake;
+    } else {
+        attack_y = lerp(attack_y, 256, 0.15);
+    }
+    
+    // Terminar efecto
+    if (hit_timer >= hit_duration) {
+        is_player_hit = false;
+        hit_timer = 0;
+        attack_x = player_base_x;
+        attack_y = 256;
+    }
+}	
 // Verificar victoria
 if (enemy_hp <= 0 && global.turn_state != "BATTLE_END") {
     global.turn_state = "BATTLE_END";

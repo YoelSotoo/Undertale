@@ -4,13 +4,19 @@ if (instance_exists(other)) {
         global.player_hp -= damage;
         global.inv_frames = 60; // 1 segundo de invulnerabilidad
         
+        // ACTIVAR EFECTO DE HIT - AGREGAR ESTO
+        var battle = instance_find(obj_battle_controller, 0);
+        if (instance_exists(battle)) {
+            battle.is_player_hit = true;
+            battle.hit_timer = 0;
+            // Dirección aleatoria del knockback
+            battle.hit_direction = choose(-1, 1); // Izquierda o derecha aleatorio
+        }
+        
         // Efecto visual en el alma
         with (other) {
             flash_timer = 10;
         }
-        
-        // Sonido de daño (si tienes)
-        // audio_play_sound(snd_hurt, 1, false);
     }
     
     // Destruir el proyectil

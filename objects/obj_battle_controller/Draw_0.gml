@@ -1,20 +1,31 @@
-// Jugador - con animación de ataque de 8 frames
-if (is_attacking) {
-    // Sprite de ataque con el frame actual
-    draw_sprite(attack_sprite, attack_frame, attack_x, attack_y);
-} else {
-    // Sprite normal
-    draw_sprite(spr_AllFight_1, image_index, attack_x, attack_y);
+// Jugador - con efectos de ataque y hit
+var current_sprite = spr_AllFight_1;
+var current_frame = image_index;
+var draw_x = attack_x;
+var draw_y = attack_y;
+
+// Determinar qué sprite usar
+if (is_player_hit) {
+    // Sprite de hit
+    current_sprite = hit_sprite;
+    current_frame = 0; // O el frame que quieras para hit
+} else if (is_attacking) {
+    // Sprite de ataque
+    current_sprite = attack_sprite;
+    current_frame = attack_frame;
 }
 
-// Enemigo con efectos
+// Dibujar sprite correspondiente
+draw_sprite(current_sprite, current_frame, draw_x, draw_y);
+
+// Enemigo con efectos, en enemy_x/enemy_y
 if (enemy_sprite != noone) {
     var ex = enemy_x, ey = enemy_y;
-    var current_sprite = enemy_sprite;
+    var current_enemy_sprite = enemy_sprite;
 
     // Cambiar sprite si está derrotado
     if (enemy_hp <= 0 && enemy_happy_sprite != noone) {
-        current_sprite = enemy_happy_sprite;
+        current_enemy_sprite = enemy_happy_sprite;
     }
 
     if (enemy_shake_timer > 0) {
@@ -24,23 +35,13 @@ if (enemy_sprite != noone) {
     }
 
     if (enemy_flash_timer > 0) {
-        draw_sprite_ext(current_sprite, image_index, ex, ey, 1, 1, 0, c_white, 1);
+        draw_sprite_ext(current_enemy_sprite, image_index, ex, ey, 1, 1, 0, c_white, 1);
         enemy_flash_timer--;
     } else {
-        draw_sprite(current_sprite, image_index, ex, ey);
+        draw_sprite(current_enemy_sprite, image_index, ex, ey);
     }
 }
-// DEBUG MEJORADO
-draw_set_color(c_white);
-draw_set_halign(fa_left);
-draw_set_font(-1);
-draw_text(10, 10, "Jugador HP: " + string(global.player_hp) + "/" + string(global.player_max_hp));
-draw_text(10, 30, "Enemigo HP: " + string(enemy_hp) + "/" + string(enemy_max_hp));
-draw_text(10, 50, "Inv Frames: " + string(global.inv_frames));
-draw_text(10, 70, "Turn State: " + string(global.turn_state));
-draw_text(10, 90, "Proyectiles: " + string(instance_number(obj_proyectil_enemy)));
 
-//barra de vida enemigo
 // Barra de vida del ENEMIGO
 var bar_width = 100;
 var bar_height = 8;
@@ -60,3 +61,11 @@ draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_percent), bar_y + bar_heigh
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_text(enemy_x, bar_y - 15, string(enemy_hp) + "/" + string(enemy_max_hp));
+
+// DEBUG MEJORADO
+draw_set_halign(fa_left);
+draw_text(10, 10, "Jugador HP: " + string(global.player_hp) + "/" + string(global.player_max_hp));
+draw_text(10, 30, "Enemigo HP: " + string(enemy_hp) + "/" + string(enemy_max_hp));
+draw_text(10, 50, "Inv Frames: " + string(global.inv_frames));
+draw_text(10, 70, "Turn State: " + string(global.turn_state));
+draw_text(10, 90, "Proyectiles: " + string(instance_number(obj_proyectil_enemy)));
