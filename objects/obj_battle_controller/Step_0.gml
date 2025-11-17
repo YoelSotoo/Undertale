@@ -1,9 +1,14 @@
 // Verificar victoria
 if (enemy_hp <= 0 && global.turn_state != "BATTLE_END") {
     global.turn_state = "BATTLE_END";
-    // Aquí irán efectos de victoria
-    show_debug_message("¡ENEMIGO DERROTADO!");
     
+    // Crear texto de victoria
+    if (!instance_exists(obj_victory_text)) {
+        instance_create_layer(0, 0, "UI", obj_victory_text);
+    }
+    // Pequeño movimiento de alegría
+    enemy_y = 256 + sin(current_time / 100000) * 5; // Oscilación suave
+	
     // Ocultar alma y detener proyectiles
     if (instance_exists(global.soul_id)) {
         global.soul_id.visible = false;
@@ -18,6 +23,9 @@ if (enemy_hp <= 0 && global.turn_state != "BATTLE_END") {
     if (instance_exists(obj_BulletGenerator)) {
         instance_destroy(obj_BulletGenerator);
     }
+    
+    // Ocultar menú
+    global.UISelectionMenu = -1;
 }
 
 // Controlar efectos visuales

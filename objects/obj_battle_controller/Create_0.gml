@@ -14,6 +14,7 @@ enemy_bullet_damage = 4;
 switch (global.current_enemy) {
     case obj_Enemy:
         enemy_sprite        = spr_Enemy_fury;
+		enemy_happy_sprite = spr_Enemy_happy; // Sprite cuando es derrotado
         enemy_x             = 545;
         enemy_y             = 256;
         enemy_pattern       = "basic";

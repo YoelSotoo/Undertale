@@ -1,9 +1,15 @@
 // Jugador
 draw_sprite(spr_AllFight_1, image_index, 100, 256);
 
-// Enemigo con efectos, en enemy_x/enemy_y
+// Enemigo con efectos
 if (enemy_sprite != noone) {
     var ex = enemy_x, ey = enemy_y;
+    var current_sprite = enemy_sprite;
+
+    // Cambiar sprite si está derrotado
+    if (enemy_hp <= 0 && enemy_happy_sprite != noone) {
+        current_sprite = enemy_happy_sprite;
+    }
 
     if (enemy_shake_timer > 0) {
         ex += irandom_range(-enemy_shake_intensity, enemy_shake_intensity);
@@ -12,13 +18,12 @@ if (enemy_sprite != noone) {
     }
 
     if (enemy_flash_timer > 0) {
-        draw_sprite_ext(enemy_sprite, image_index, ex, ey, 1,1,0, c_white, 1);
+        draw_sprite_ext(current_sprite, image_index, ex, ey, 1, 1, 0, c_white, 1);
         enemy_flash_timer--;
     } else {
-        draw_sprite(enemy_sprite, image_index, ex, ey);
+        draw_sprite(current_sprite, image_index, ex, ey);
     }
 }
-
 // DEBUG MEJORADO
 draw_set_color(c_white);
 draw_set_halign(fa_left);
