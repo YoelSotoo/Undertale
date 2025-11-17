@@ -1,22 +1,38 @@
-// Jugador - con efectos de ataque y hit
+// Jugador - con efectos de ataque, hit y muerte
 var current_sprite = spr_AllFight_1;
 var current_frame = image_index;
 var draw_x = attack_x;
 var draw_y = attack_y;
+var draw_alpha = 1;
 
 // Determinar qué sprite usar
-if (is_player_hit) {
+if (is_player_dead) {
+    // Sprite de muerte
+    current_sprite = death_sprite;
+    current_frame = 0;
+    
+    // Efecto de desvanecimiento
+    if (death_timer > 60) {
+        draw_alpha = 1.0 - ((death_timer - 60) / 60.0);
+    }
+} 
+else if (is_player_hit) {
     // Sprite de hit
     current_sprite = hit_sprite;
-    current_frame = 0; // O el frame que quieras para hit
-} else if (is_attacking) {
+    current_frame = 0;
+} 
+else if (is_attacking) {
     // Sprite de ataque
     current_sprite = attack_sprite;
     current_frame = attack_frame;
 }
 
 // Dibujar sprite correspondiente
-draw_sprite(current_sprite, current_frame, draw_x, draw_y);
+if (draw_alpha < 1) {
+    draw_sprite_ext(current_sprite, current_frame, draw_x, draw_y, 1, 1, 0, c_white, draw_alpha);
+} else {
+    draw_sprite(current_sprite, current_frame, draw_x, draw_y);
+}
 
 // Enemigo con efectos, en enemy_x/enemy_y
 if (enemy_sprite != noone) {

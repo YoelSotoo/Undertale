@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_AllFight_Hit",
   "bboxMode":0,
-  "bbox_bottom":71,
+  "bbox_bottom":64,
   "bbox_left":0,
   "bbox_right":39,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"ffcd41b8-1237-4bc8-81ba-d9672d4cba6c","name":"ffcd41b8-1237-4bc8-81ba-d9672d4cba6c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"104ff2d9-6e3b-40fd-b6b8-2b0fa3465738","name":"104ff2d9-6e3b-40fd-b6b8-2b0fa3465738","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":72,
+  "height":65,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"689e54f5-e142-4f03-97ef-d6ce4fdcade1","blendMode":0,"displayName":"default","isLocked":false,"name":"689e54f5-e142-4f03-97ef-d6ce4fdcade1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6fd27157-151c-4390-9f19-7274c23252f9","blendMode":0,"displayName":"default","isLocked":false,"name":"6fd27157-151c-4390-9f19-7274c23252f9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_AllFight_Hit",
   "nineSlice":null,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ffcd41b8-1237-4bc8-81ba-d9672d4cba6c","path":"sprites/spr_AllFight_Hit/spr_AllFight_Hit.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"66714295-156c-437f-93ad-372ec1c89342","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"104ff2d9-6e3b-40fd-b6b8-2b0fa3465738","path":"sprites/spr_AllFight_Hit/spr_AllFight_Hit.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"acdc797e-1605-4c58-bed8-e65d8aa7cf53","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
