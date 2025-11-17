@@ -52,6 +52,13 @@ hit_knockback = 12; // ↓ UN POCO MENOS DE FUERZA
 hit_direction = 1;
 player_base_x = 100;
 hit_shake_speed = 0.3; // ↓ MÁS LENTO (controla la suavidad)
+
+// Muerte del jugador
+death_sprite = spr_AllFight_down;
+is_player_dead = false;
+death_timer = 0;
+death_duration = 120; // 2 segundos para efectos de muerte
+
 // FX enemigo
 enemy_shake_timer = 0;
 enemy_shake_intensity = 10;
