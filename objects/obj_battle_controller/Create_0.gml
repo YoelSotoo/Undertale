@@ -34,6 +34,15 @@ global.player_defense = 11;
 global.soul_spd       = 4;
 global.inv_frames     = 0;
 
+// Animación de ataque
+attack_sprite = spr_AllFight_Attack_Knif;
+attack_timer = 0;
+is_attacking = false;
+attack_frame = 0;
+attack_speed = 3; // Velocidad de la animación (cada 3 frames cambia)
+attack_x = 100;
+attack_y = 256;
+
 // FX enemigo
 enemy_shake_timer = 0;
 enemy_shake_intensity = 10;

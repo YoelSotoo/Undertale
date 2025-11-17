@@ -1,5 +1,11 @@
-// Jugador
-draw_sprite(spr_AllFight_1, image_index, 100, 256);
+// Jugador - con animación de ataque de 8 frames
+if (is_attacking) {
+    // Sprite de ataque con el frame actual
+    draw_sprite(attack_sprite, attack_frame, attack_x, attack_y);
+} else {
+    // Sprite normal
+    draw_sprite(spr_AllFight_1, image_index, attack_x, attack_y);
+}
 
 // Enemigo con efectos
 if (enemy_sprite != noone) {

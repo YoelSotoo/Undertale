@@ -1,3 +1,19 @@
+// Controlar animación de ataque con 8 frames
+if (is_attacking) {
+    attack_timer++;
+    
+    // Cambiar frame según la velocidad
+    if (attack_timer >= attack_speed) {
+        attack_timer = 0;
+        attack_frame++;
+        
+        // Si llegó al final de la animación, terminar
+        if (attack_frame >= 8) {
+            is_attacking = false;
+            attack_frame = 0;
+        }
+    }
+}
 // Verificar victoria
 if (enemy_hp <= 0 && global.turn_state != "BATTLE_END") {
     global.turn_state = "BATTLE_END";

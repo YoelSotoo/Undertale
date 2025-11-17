@@ -15,7 +15,14 @@ if (can_press) {
     if (_confirm) {
         can_press = false;
         hit_anim_frame = 0;
-
+		// --- ACTIVAR ANIMACIÓN DE ATAQUE COMPLETA ---
+		    var battle = instance_find(obj_battle_controller, 0);
+		    if (instance_exists(battle)) {
+		        battle.is_attacking = true;
+		        battle.attack_frame = 0; // Empezar desde frame 0
+		        battle.attack_timer = 0;
+		    }
+		   
         // --- Lógica de daño --- CORREGIDA
 			var _damage = 0;
 			var _player_attack = 10; // Ataque base del jugador
