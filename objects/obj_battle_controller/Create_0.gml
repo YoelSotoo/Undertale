@@ -81,3 +81,12 @@ player_damage_bonus = 0;
 prayer_active = false;
 prayer_heal_amount = 0;
 prayer_damage_taken = false;
+
+// Sprites de ACTs
+act_sprite = noone;
+is_doing_act = false;
+act_timer = 0;
+act_duration = 45; // Duración del sprite de ACT
+// Animación de ACTs
+act_frame = 0;
+act_frame_speed = 0.3; // Velocidad de la animación

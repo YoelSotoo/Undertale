@@ -1,11 +1,11 @@
-// Jugador - con efectos de ataque, hit y muerte
+// Jugador - con efectos de ataque, hit, muerte y ACTs
 var current_sprite = spr_AllFight_1;
 var current_frame = image_index;
 var draw_x = attack_x;
 var draw_y = attack_y;
 var draw_alpha = 1;
 
-// Determinar qué sprite usar
+// Determinar qué sprite usar (ORDEN DE PRIORIDAD)
 if (is_player_dead) {
     // Sprite de muerte
     current_sprite = death_sprite;
@@ -16,6 +16,11 @@ if (is_player_dead) {
         draw_alpha = 1.0 - ((death_timer - 60) / 60.0);
     }
 } 
+else if (is_doing_act && act_sprite != noone) {
+    // Sprite de ACT con animación
+    current_sprite = act_sprite;
+    current_frame = floor(act_frame); // Usar el frame calculado
+}
 else if (is_player_hit) {
     // Sprite de hit
     current_sprite = hit_sprite;
@@ -26,7 +31,6 @@ else if (is_attacking) {
     current_sprite = attack_sprite;
     current_frame = attack_frame;
 }
-
 // Dibujar sprite correspondiente
 if (draw_alpha < 1) {
     draw_sprite_ext(current_sprite, current_frame, draw_x, draw_y, 1, 1, 0, c_white, draw_alpha);

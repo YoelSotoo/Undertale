@@ -197,3 +197,25 @@ if (global.turn_state == "PLAYER_TURN") {
     prayer_active = false;
     prayer_damage_taken = false;
 }
+
+// Controlar animación de ACTs
+if (is_doing_act) {
+    act_timer--;
+    
+    // Avanzar animación de frames
+    act_frame += act_frame_speed;
+    
+    // Si el sprite tiene múltiples frames, usar el frame actual
+    if (act_sprite != noone) {
+        var max_frames = sprite_get_number(act_sprite);
+        if (act_frame >= max_frames) {
+            act_frame = 0; // Loop de la animación
+        }
+    }
+    
+    if (act_timer <= 0) {
+        is_doing_act = false;
+        act_sprite = noone;
+        act_frame = 0;
+    }
+}
