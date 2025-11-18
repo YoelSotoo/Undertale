@@ -24,8 +24,20 @@ if (global.player_hp <= 0 && !is_player_dead) {
     
     // Ocultar menú
     global.UISelectionMenu = -1;
+    
+    // Crear pantalla de Game Over después de un delay
+    alarm[2] = room_speed * 2; // 2 segundos de delay
 }
 
+// Controlar efectos de muerte
+if (is_player_dead) {
+    death_timer++;
+    
+    // Efecto de desvanecimiento
+    if (death_timer > 60) {
+        // El jugador se desvanece
+    }
+}
 // Controlar efectos de muerte
 if (is_player_dead) {
     death_timer++;
