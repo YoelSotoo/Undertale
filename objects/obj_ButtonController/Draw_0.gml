@@ -74,14 +74,14 @@ if (global.UISelectionMenu > -1) {
 			            break;
             
 			        case 2: // REZAR
-			            battle.prayer_active = true;
-			            battle.prayer_heal_amount = 5;
-			            // ACTIVAR SPRITE DE REZAR
-			            battle.act_sprite = spr_AllFight_Rezar;
-			            battle.is_doing_act = true;
-			            battle.act_timer = battle.act_duration;
-			            show_debug_message("Rezaste... Si evitas daño, curarás 5 HP");
-			            break;
+					    battle.prayer_active = true;
+					    battle.prayer_heal_amount = 5;
+					    battle.prayer_damage_taken = false; // ← Asegurar que empiece en false
+					    battle.act_sprite = spr_AllFight_Rezar;
+					    battle.is_doing_act = true;
+					    battle.act_timer = battle.act_duration;
+					    show_debug_message("Rezaste... Si evitas daño, curarás 5 HP");
+					    break;
 			    }
     
 			    // Pasar turno después de ACT

@@ -79,7 +79,7 @@ enemy_damage_reduction = 1.0; // 1.0 = daño normal
 enemy_damage_reduction_turns = 0;
 player_damage_bonus = 0;
 prayer_active = false;
-prayer_heal_amount = 0;
+prayer_heal_amount = 5;
 prayer_damage_taken = false;
 
 // Sprites de ACTs

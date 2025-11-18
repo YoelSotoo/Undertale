@@ -173,31 +173,40 @@ switch (global.turn_state) {
         break;
 }
 
-// Manejar efectos de ACTs (agregar esto en el STEP)
+// Manejar efectos de ACTs - VERSIÓN CORREGIDA
 if (global.turn_state == "PLAYER_TURN") {
-    // Resetear reducción de daño después del turno enemigo
-    if (enemy_damage_reduction_turns > 0) {
-        enemy_damage_reduction_turns--;
-        if (enemy_damage_reduction_turns <= 0) {
-            enemy_damage_reduction = 1.0;
-            show_debug_message("Efecto de provocar terminó");
+    // Verificar efecto de rezar (solo si no recibió daño en el turno anterior)
+    if (prayer_active) {
+        show_debug_message("Rezar activo - Daño recibido: " + string(prayer_damage_taken));
+        
+        if (!prayer_damage_taken) {
+            global.player_hp += prayer_heal_amount;
+            if (global.player_hp > global.player_max_hp) {
+                global.player_hp = global.player_max_hp;
+            }
+            show_debug_message("¡Rezo cumplido! +" + string(prayer_heal_amount) + " HP");
+        } else {
+            show_debug_message("Rezar falló - Recibiste daño");
         }
+        
+        // SOLO resetear prayer_active, NO prayer_damage_taken
+        prayer_active = false;
     }
     
-    // Verificar efecto de rezar (solo si no recibió daño)
-    if (prayer_active && !prayer_damage_taken) {
-        global.player_hp += prayer_heal_amount;
-        if (global.player_hp > global.player_max_hp) {
-            global.player_hp = global.player_max_hp;
-        }
-        show_debug_message("¡Rezo cumplido! +" + string(prayer_heal_amount) + " HP");
-    }
-    
-    // Resetear variables de rezar para el próximo turno
-    prayer_active = false;
-    prayer_damage_taken = false;
+    // Resetear damage_taken SOLO al inicio del turno enemigo
+    // Esto se hará en otra parte...
 }
 
+// Resetear prayer_damage_taken al INICIAR el turno enemigo
+if (global.turn_state == "ENEMY_TURN") {
+    prayer_damage_taken = false;
+    show_debug_message("Turno enemigo - Reset prayer_damage_taken a false");
+}
+
+// Debug de rezar (temporal)
+if (prayer_active) {
+    show_debug_message("Rezar activo - Daño recibido: " + string(prayer_damage_taken));
+}
 // Controlar animación de ACTs
 if (is_doing_act) {
     act_timer--;
