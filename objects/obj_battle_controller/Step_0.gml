@@ -172,3 +172,28 @@ switch (global.turn_state) {
         // La alarma controla el fin del turno
         break;
 }
+
+// Manejar efectos de ACTs (agregar esto en el STEP)
+if (global.turn_state == "PLAYER_TURN") {
+    // Resetear reducción de daño después del turno enemigo
+    if (enemy_damage_reduction_turns > 0) {
+        enemy_damage_reduction_turns--;
+        if (enemy_damage_reduction_turns <= 0) {
+            enemy_damage_reduction = 1.0;
+            show_debug_message("Efecto de provocar terminó");
+        }
+    }
+    
+    // Verificar efecto de rezar (solo si no recibió daño)
+    if (prayer_active && !prayer_damage_taken) {
+        global.player_hp += prayer_heal_amount;
+        if (global.player_hp > global.player_max_hp) {
+            global.player_hp = global.player_max_hp;
+        }
+        show_debug_message("¡Rezo cumplido! +" + string(prayer_heal_amount) + " HP");
+    }
+    
+    // Resetear variables de rezar para el próximo turno
+    prayer_active = false;
+    prayer_damage_taken = false;
+}

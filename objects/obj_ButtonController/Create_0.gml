@@ -36,3 +36,9 @@ if (!variable_global_exists("BattleMenu")) { global.BattleMenu = 0; }
 if (!variable_global_exists("UISelectionMenu")) { global.UISelectionMenu = 0; }
 if (!variable_global_exists("Monsters")) { global.Monsters = 0; }
 if (!variable_global_exists("Monster")) { global.Monster = [noone, noone, noone]; }
+
+// Sistema de ACTs/////////////////////////////////////////////
+act_menu_visible = false;
+act_options = ["Provocar", "Meditar", "Rezar"];
+current_act_selection = 0;
+act_description = "";

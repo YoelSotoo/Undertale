@@ -73,3 +73,11 @@ audio_play_sound(snd_rudebuster, 1, true);
 enemy_hp = 30;
 enemy_max_hp = 30;
 enemy_defense = 5;
+
+// Efectos de ACTs
+enemy_damage_reduction = 1.0; // 1.0 = daño normal
+enemy_damage_reduction_turns = 0;
+player_damage_bonus = 0;
+prayer_active = false;
+prayer_heal_amount = 0;
+prayer_damage_taken = false;

@@ -15,40 +15,49 @@ if (can_press) {
     if (_confirm) {
         can_press = false;
         hit_anim_frame = 0;
-		// --- ACTIVAR ANIMACIÓN DE ATAQUE COMPLETA ---
-		    var battle = instance_find(obj_battle_controller, 0);
-		    if (instance_exists(battle)) {
-		        battle.is_attacking = true;
-		        battle.attack_frame = 0; // Empezar desde frame 0
-		        battle.attack_timer = 0;
-		    }
-		   
-        // --- Lógica de daño --- CORREGIDA
-			var _damage = 0;
-			var _player_attack = 10; // Ataque base del jugador
+        
+        // --- ACTIVAR ANIMACIÓN DE ATAQUE COMPLETA ---
+        var battle = instance_find(obj_battle_controller, 0);
+        if (instance_exists(battle)) {
+            battle.is_attacking = true;
+            battle.attack_frame = 0;
+            battle.attack_timer = 0;
+        }
+        
+        // --- Lógica de daño ---
+        var _damage = 0;
+        var _player_attack = 10;
 
-			if (abs(cursor_pos_relative) <= 10)
-			    _damage = _player_attack * 2;
-			else if (abs(cursor_pos_relative) <= 30)
-			    _damage = _player_attack * 1.5;
-			else
-			    _damage = _player_attack * 0.5;
+        // Aplicar bonus de meditar
+        var battle = instance_find(obj_battle_controller, 0);
+        if (instance_exists(battle)) {
+            _player_attack += battle.player_damage_bonus;
+        }
 
-			_damage = round(_damage);
-			damage_text = string(_damage);
+        if (abs(cursor_pos_relative) <= 10)
+            _damage = _player_attack * 2;
+        else if (abs(cursor_pos_relative) <= 30)
+            _damage = _player_attack * 1.5;
+        else
+            _damage = _player_attack * 0.5;
 
-			// APLICAR DAÑO AL ENEMIGO - AGREGAR ESTO
-			var battle = instance_find(obj_battle_controller, 0);
-			if (instance_exists(battle)) {
-			    battle.enemy_hp -= max(1, _damage - battle.enemy_defense);
-    
-			    // Verificar si el enemigo murió
-			    if (battle.enemy_hp <= 0) {
-			        battle.enemy_hp = 0;
-			        // Aquí luego pondremos la victoria
-			    }
-			}
-
+        _damage = round(_damage);
+        damage_text = string(_damage);
+        
+        // --- ¡APLICAR DAÑO AL ENEMIGO! ---
+        var battle = instance_find(obj_battle_controller, 0);
+        if (instance_exists(battle)) {
+            var dano_final = max(1, _damage);
+            battle.enemy_hp -= dano_final;
+            
+            show_debug_message("Daño aplicado: " + string(dano_final) + " | HP enemigo: " + string(battle.enemy_hp));
+            
+            if (battle.enemy_hp <= 0) {
+                battle.enemy_hp = 0;
+                show_debug_message("¡ENEMIGO DERROTADO!");
+            }
+        }
+        
         // Efectos en el enemigo
         with (obj_battle_controller) {
             enemy_shake_timer = 10;
@@ -56,8 +65,8 @@ if (can_press) {
         }
 
         // --- Alarmas ---
-        alarm[0] = room_speed * 0.5; // limpia texto
-        alarm[1] = room_speed * 1;   // pasa turno enemigo
+        alarm[0] = room_speed * 0.5;
+        alarm[1] = room_speed * 1;
     }
 }
 

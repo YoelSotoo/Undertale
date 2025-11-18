@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"update_act_description",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"update_act_description",
+  "parent":{
+    "name":"act",
+    "path":"folders/Battle_System/SCRS/act.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
