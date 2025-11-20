@@ -55,4 +55,28 @@ if (keyboard_check_pressed(vk_escape)) {
     visible = false;
 }
 
+//Usar un item con la Z ai bien undertula
+
+if (keyboard_check_pressed(ord("Z")))
+{
+    var it = items[cursor];
+
+    if (is_undefined(it)) exit;  // Sin item = no hace nada
+
+    // Comprobar si tiene una función asignada
+    if (is_callable(it.func))
+    {
+        // Ejecutar la función del item
+        it.func();
+
+        // Opcional: eliminar item después de usarlo
+        array_delete(items, cursor, 1);
+
+        // Ajustar selección si quedó fuera de rango
+        if (cursor >= array_length(items)) {
+            cursor = array_length(items) - 1;
+        }
+    }
+}
+
 

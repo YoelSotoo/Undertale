@@ -80,3 +80,6 @@ if (global.inventory_open) {
     exit;
 }
 can_move = true;
+
+
+

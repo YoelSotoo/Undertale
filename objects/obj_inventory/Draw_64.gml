@@ -69,5 +69,5 @@ if (total > 0) {
     var sel = items[cursor];
     draw_text(desc_x, desc_y, sel.desc);
 } else {
-    draw_text(desc_x, desc_y, "Inventario vacío.");
+    draw_text(desc_x, desc_y, "Inventario vacio.");
 }

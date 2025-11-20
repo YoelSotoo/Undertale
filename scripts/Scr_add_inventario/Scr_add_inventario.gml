@@ -1,8 +1,10 @@
 function Scr_add_inventario() {
-    var _name   = argument0;
-    var _desc   = argument1;
-    var _amount = argument2;
-    var _type   = argument_count > 3 ? argument3 : "misc"; // tipo opcional
+
+    var _name    = argument0;
+    var _desc    = argument1;
+    var _amount  = argument2;
+    var _type    = argument_count > 3 ? argument3 : "misc";
+    var _func    = argument_count > 4 ? argument4 : noone; // función opcional
 
     // Buscar el inventario (solo debería haber uno)
     var inv = instance_find(obj_inventory, 0);
@@ -16,11 +18,20 @@ function Scr_add_inventario() {
         inv.items = [];
     }
 
-    // Buscar si el ítem ya existe
+    // Buscar si el ítem ya existe (mismo nombre)
     var found = false;
     for (var i = 0; i < array_length(inv.items); i++) {
+
         if (inv.items[i].name == _name) {
+
+            // Aumentar cantidad
             inv.items[i].count += _amount;
+
+            // Si el item no tenía función y ahora sí, se actualiza
+            if (_func != noone && !is_callable(inv.items[i].func)) {
+                inv.items[i].func = _func;
+            }
+
             found = true;
             break;
         }
@@ -32,7 +43,8 @@ function Scr_add_inventario() {
             name: _name,
             desc: _desc,
             count: _amount,
-            type: _type
+            type: _type,
+            func: _func
         };
         array_push(inv.items, new_item);
     }
