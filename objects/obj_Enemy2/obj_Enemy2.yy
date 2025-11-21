@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_TextBoxOpenner",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_Enemy2",
+  "eventList":[],
   "managed":true,
-  "name":"obj_TextBoxOpenner",
+  "name":"obj_Enemy2",
   "overriddenProperties":[],
   "parent":{
-    "name":"TextBox",
-    "path":"folders/Objects/Recursos/TextBox.yy",
+    "name":"Enemys",
+    "path":"folders/Battle_System/Enemys.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_TextOpener",
-    "path":"sprites/spr_TextOpener/spr_TextOpener.yy",
+    "name":"spr_recursos_enemi_6",
+    "path":"sprites/spr_recursos_enemi_6/spr_recursos_enemi_6.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"TextBox",
-    "path":"folders/Objects/TextBox.yy",
+    "path":"folders/Objects/Recursos/TextBox.yy",
   },
   "parentObjectId":null,
   "persistent":false,

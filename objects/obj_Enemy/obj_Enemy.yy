@@ -6,8 +6,8 @@
   "name":"obj_Enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Objects/obj_tutorial/Enemy.yy",
+    "name":"Enemys",
+    "path":"folders/Battle_System/Enemys.yy",
   },
   "parentObjectId":null,
   "persistent":false,
