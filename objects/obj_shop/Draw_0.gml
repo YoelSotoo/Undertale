@@ -50,6 +50,6 @@ if (array_length(opciones) > 0) {
 }
 
 // Dibujar cursor
-var indicador_x = start_x - 25;
-var indicador_y = start_y + (cursor_index * offset_y);
-draw_sprite(spr_indicador, 0, indicador_x, indicador_y);
+var indicador_x = start_x - 15;
+var indicador_y = start_y + (cursor_index * offset_y) + 10;
+draw_sprite(spr_cursor, 0, indicador_x, indicador_y);
