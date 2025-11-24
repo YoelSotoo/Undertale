@@ -328,6 +328,7 @@
     {"id":{"name":"spr_tp","path":"sprites/spr_tp/spr_tp.yy",},},
     {"id":{"name":"spr_TTB","path":"sprites/spr_TTB/spr_TTB.yy",},},
     {"id":{"name":"spr_Wall","path":"sprites/spr_Wall/spr_Wall.yy",},},
+    {"id":{"name":"Sprite112","path":"sprites/Sprite112/Sprite112.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
