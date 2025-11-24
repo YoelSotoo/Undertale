@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_reset_battle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_reset_battle",
+  "parent":{
+    "name":"Reinicio",
+    "path":"folders/Battle_System/SCRS/Reinicio.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

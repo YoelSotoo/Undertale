@@ -11,3 +11,8 @@ fade_speed = 0.05;
 
 // Profundidad muy alta para que esté sobre todo
 depth = -100000;
+
+// Detener todos los sonidos de batalla
+audio_stop_all();
+
+audio_play_sound(snd_ruinas, 1, false);
