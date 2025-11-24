@@ -1,3 +1,8 @@
+// En cualquier objeto
+if (keyboard_check_pressed(ord("R")) && keyboard_check(vk_control)) {
+    scr_reset_save();
+}
+
 // =================== 1. CAPTURAR INPUTS ===================
 var right_key = keyboard_check(vk_right);
 var left_key = keyboard_check(vk_left);
@@ -5,7 +10,7 @@ var up_key = keyboard_check(vk_up);
 var down_key = keyboard_check(vk_down);
 
 // Solo se puede mover si can_move es true
-if (!can_move) {
+if (!can_move || global.dialogue_active) {
     xspd = 0;
     yspd = 0;
 } else {

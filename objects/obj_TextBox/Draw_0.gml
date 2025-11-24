@@ -8,6 +8,7 @@ textbox_x = camera_get_view_x(view_camera[0])+ 20;
 
 textbox_y = camera_get_view_y(view_camera[0]) + 154;
 
+global.dialogue_active = true;  // ← BLOQUEAR MOVIMIENTO
 
 // =================== SETUP (Solo se ejecuta una vez) ===================
 if (setup == false) {
@@ -44,37 +45,37 @@ if (confirm_key || skip_key) {
     if (draw_char < text_length[page]) {
         // ...terminamos la animación de golpe.
         draw_char = text_length[page];
-    }
-    // SI NO, si el texto YA TERMINÓ...
-    else {
-        // ...pasamos a la siguiente página o cerramos el cuadro.
-        if (page < page_number - 1) {
-            page++;
-            draw_char = 0;
-        } else {
-             if (battle_on_end == true) {
-        
+	   } else {
+	     if (battle_on_end == true) {
+    
 		obj_Player.visible = false;
 		obj_Player.x = 0;
 		obj_Player.y = 0;
 		obj_Player.can_move = false;
-		
-        // Guardamos contra qué enemigo luchar en una variable global
-        global.current_enemy = enemy_to_battle;
-        
-        // Nos vamos a la room de batalla
-        room_goto(rm_Battle);
-		
-        
+	
+	    // === AGREGAR ESTO: GUARDAR ROOM ACTUAL ===
+	    global.battle_previous_room = room;
+	    global.battle_player_x = obj_Player.x; // Posición antes de batalla
+	    global.battle_player_y = obj_Player.y;
+	    show_debug_message("💾 Guardando room para regresar: " + string(room));
+    
+	    // Guardamos contra qué enemigo luchar en una variable global
+	    global.current_enemy = enemy_to_battle;
+    
+	    // Nos vamos a la room de batalla
+	    room_goto(rm_Battle);
+	
+    
 		 } else {
-        
-        // Si no hay batalla, hacemos lo de antes
-        obj_Player.can_move = true;
-        instance_destroy();
+    
+	    // Si no hay batalla, hacemos lo de antes
+	    obj_Player.can_move = true;
+		global.dialogue_active = false;  // ← PERMITIR MOVIMIENTO
+	    instance_destroy();
 		  }
-       }
-    }
-}
+	   }
+	}
+
 // =================== DIBUJADO ===================
 // Dibuja el cuadro de texto
 var txtb_sprite_w = sprite_get_width(txtb_sprite);

@@ -8,4 +8,8 @@ txtb_snd = snd_maniqui;
 
 // --- ACTIVAMOS LA BATALLA ---
 battle_on_end = true;          // ¡Sí, queremos una batalla al final!
-enemy_to_battle = obj_Enemy;   // Y queremos que sea contra el objeto del maniquí.
+enemy_to_battle = obj_Enemy;   // Y	 queremos que sea contra el objeto del maniquí.
+
+enemy_id = "enemy1";
+check_progress = true;
+	

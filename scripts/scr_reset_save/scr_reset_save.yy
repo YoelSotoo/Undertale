@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_reset_battle",
+  "%Name":"scr_reset_save",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_reset_battle",
+  "name":"scr_reset_save",
   "parent":{
-    "name":"Reinicio",
-    "path":"folders/Battle_System/SCRS/Reinicio.yy",
+    "name":"Guardar_JEFES",
+    "path":"folders/Battle_System/SCRS/Guardar_JEFES.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

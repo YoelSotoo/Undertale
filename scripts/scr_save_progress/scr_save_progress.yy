@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_save_progress",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_save_progress",
+  "parent":{
+    "name":"Guardar_JEFES",
+    "path":"folders/Battle_System/SCRS/Guardar_JEFES.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

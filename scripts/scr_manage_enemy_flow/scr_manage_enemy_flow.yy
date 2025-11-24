@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_manage_enemy_flow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_manage_enemy_flow",
+  "parent":{
+    "name":"Guardar_JEFES",
+    "path":"folders/Battle_System/SCRS/Guardar_JEFES.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

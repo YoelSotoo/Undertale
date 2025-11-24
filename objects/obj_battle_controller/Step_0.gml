@@ -120,30 +120,20 @@ if (is_player_hit) {
 if (enemy_hp <= 0 && global.turn_state != "BATTLE_END") {
     global.turn_state = "BATTLE_END";
     
-    // Crear texto de victoria
-    if (!instance_exists(obj_victory_text)) {
-        instance_create_layer(0, 0, "UI", obj_victory_text);
-    }
-    // Pequeño movimiento de alegría
-    enemy_y = 256 + sin(current_time / 100000) * 5; // Oscilación suave
-	
-    // Ocultar alma y detener proyectiles
-    if (instance_exists(global.soul_id)) {
-        global.soul_id.visible = false;
-    }
-    
-    // Destruir todos los proyectiles
-    with (obj_proyectil_enemy) {
-        instance_destroy();
+    // Guardar progreso
+    if (global.current_enemy == obj_Enemy) {
+        scr_save_progress("enemy1");
+        show_debug_message("✅ Maniquí derrotado - Progreso guardado");
+    } else if (global.current_enemy == obj_Enemy2) {
+        scr_save_progress("enemy2");
+        show_debug_message("✅ Enemigo 2 derrotado - Progreso guardado");
+    } else if (global.current_enemy == obj_Enemy3) {
+        scr_save_progress("enemy3");
+        show_debug_message("✅ Enemigo 3 derrotado - Progreso guardado");
     }
     
-    // Destruir BulletGenerator si existe
-    if (instance_exists(obj_BulletGenerator)) {
-        instance_destroy(obj_BulletGenerator);
-    }
-    
-    // Ocultar menú
-    global.UISelectionMenu = -1;
+    // REGRESAR A ROOM ORIGINAL DESPUÉS DE UN DELAY
+    alarm[3] = room_speed * 3; // 3 segundos de delay para ver la victoria
 }
 
 // Controlar efectos visuales

@@ -25,4 +25,7 @@ if (!instance_exists(obj_game_control)) {
 //asi es la vida asi tan complicada
 //juanxho estubo aki
 
-
+// Inicializar variable global si no existe
+if (!variable_global_exists("dialogue_active")) {
+    global.dialogue_active = false;
+}

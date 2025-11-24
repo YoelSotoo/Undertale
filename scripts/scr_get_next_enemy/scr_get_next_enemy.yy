@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_get_next_enemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_get_next_enemy",
+  "parent":{
+    "name":"Guardar_JEFES",
+    "path":"folders/Battle_System/SCRS/Guardar_JEFES.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
