@@ -35,5 +35,6 @@ if (instance_exists(other)) {
         }
     }
     
+	audio_play_sound(snd_golpe, 1, false);
     instance_destroy();
 }

@@ -49,6 +49,7 @@ if (can_press) {
         if (instance_exists(battle)) {
             var dano_final = max(1, _damage);
             battle.enemy_hp -= dano_final;
+			audio_play_sound(snd_hit, 1, false);
             
             show_debug_message("Daño aplicado: " + string(dano_final) + " | HP enemigo: " + string(battle.enemy_hp));
             

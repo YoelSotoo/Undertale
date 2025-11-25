@@ -1,53 +1,27 @@
-function Scr_add_inventario() {
+function Scr_add_inventario(_name, _desc, _amount, _type, _id) {
 
-    var _name    = argument0;
-    var _desc    = argument1;
-    var _amount  = argument2;
-    var _type    = argument_count > 3 ? argument3 : "misc";
-    var _func    = argument_count > 4 ? argument4 : noone; // función opcional
-
-    // Buscar el inventario (solo debería haber uno)
     var inv = instance_find(obj_inventory, 0);
-    if (!instance_exists(inv)) {
-        show_debug_message("No se encontró obj_inventory al intentar agregar ítem.");
-        return;
-    }
+    if (!instance_exists(inv)) return;
 
-    // Inicializar items si no existe (por seguridad)
-    if (!is_array(inv.items)) {
-        inv.items = [];
-    }
+    if (!is_array(inv.items)) inv.items = [];
 
-    // Buscar si el ítem ya existe (mismo nombre)
-    var found = false;
+    // Buscar si ya existe
     for (var i = 0; i < array_length(inv.items); i++) {
 
-        if (inv.items[i].name == _name) {
-
-            // Aumentar cantidad
+        if (inv.items[i].id == _id) {  // comparar por ID
             inv.items[i].count += _amount;
-
-            // Si el item no tenía función y ahora sí, se actualiza
-            if (_func != noone && !is_callable(inv.items[i].func)) {
-                inv.items[i].func = _func;
-            }
-
-            found = true;
-            break;
+            return;
         }
     }
 
-    // Si no existe, agregar uno nuevo
-    if (!found) {
-        var new_item = {
-            name: _name,
-            desc: _desc,
-            count: _amount,
-            type: _type,
-            func: _func
-        };
-        array_push(inv.items, new_item);
-    }
+    // Crear ítem nuevo
+    var new_item = {
+        name  : _name,
+        desc  : _desc,
+        count : _amount,
+        type  : _type,
+        id    : _id   
+    };
 
-    show_debug_message("Ítem añadido: " + _name + " x" + string(_amount));
+    array_push(inv.items, new_item);
 }

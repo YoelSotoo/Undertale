@@ -1,0 +1,1 @@
+if (keyboard_check(vk_enter)){ activo = true; }

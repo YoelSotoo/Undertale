@@ -16,6 +16,9 @@ if (text_index < string_length(message)) {
 // Destruir después del tiempo
 life_timer--;
 if (life_timer <= 0) {
-    // Aquí luego podemos cambiar de room o reiniciar
+	//pa q se pueda mober el player otra vez y umm ah q se vea otra ve
     instance_destroy();
+	room_goto(Rm_Ruins_Tutorial);
+	obj_Player.visible = true;
+	obj_Player.can_move = true;
 }

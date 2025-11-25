@@ -48,10 +48,8 @@ if (confirm_key || skip_key) {
 	   } else {
 	     if (battle_on_end == true) {
     
-		obj_Player.visible = false;
-		obj_Player.x = 0;
-		obj_Player.y = 0;
-		obj_Player.can_move = false;
+		//obj_Player.visible = false;
+		//obj_Player.can_move = false;
 	
 	    // === AGREGAR ESTO: GUARDAR ROOM ACTUAL ===
 	    global.battle_previous_room = room;

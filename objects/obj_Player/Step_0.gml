@@ -84,6 +84,7 @@ if (global.inventory_open) {
     can_move = false;
     exit;
 }
+
 can_move = true;
 
 

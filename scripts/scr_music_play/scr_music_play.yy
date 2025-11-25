@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_curar_prueba",
+  "%Name":"scr_music_play",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_curar_prueba",
+  "name":"scr_music_play",
   "parent":{
-    "name":"Items",
-    "path":"folders/Scripts/Items.yy",
+    "name":"Sonido",
+    "path":"folders/Scripts/Sonido.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

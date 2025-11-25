@@ -37,3 +37,4 @@ if (global.just_loaded && variable_global_exists("load_data")) {
         global.just_loaded = false;
     }
 }
+can_move = true;

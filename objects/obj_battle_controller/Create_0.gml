@@ -66,7 +66,6 @@ enemy_flash_timer = 0;
 
 // Temporizador de ataque enemigo
 enemy_attack_duration = 90; // 1.5 segundos
-audio_play_sound(snd_rudebuster, 1, true);
 
 
 //stats enemy 
@@ -90,3 +89,7 @@ act_duration = 45; // Duración del sprite de ACT
 // Animación de ACTs
 act_frame = 0;
 act_frame_speed = 0.3; // Velocidad de la animación
+
+
+//Saca el rifle
+audio_play_sound(snd_batallainicio, 1, false);

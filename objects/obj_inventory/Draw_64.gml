@@ -14,24 +14,32 @@ draw_set_color(c_black);
 draw_rectangle(gui_x, gui_y, gui_x + gui_w, gui_y + gui_h, false);
 draw_set_alpha(1);
 
-// === Borde blanco ===
+//Borde blanco
 draw_set_color(c_white);
 draw_rectangle(gui_x, gui_y, gui_x + gui_w, gui_y + gui_h, true);
 
-// === Fuente del inventario ===
+//Fuente del inventario
 if (font_exists(font_inventario)) {
     draw_set_font(font_inventario);
 } else {
-    show_debug_message("⚠️ No se encontró 'font_inventario'");
+    show_debug_message("No se encontro 'font_inventario'");
 }
 
-// === Título ===
+//Título
 draw_text(gui_x + 16, gui_y + 8, "INVENTARIO");
 
-// === Lista de ítems ===
+//Lista de ítems
 var list_x = gui_x + 36;
 var list_y = gui_y + 50;
 var total = array_length(items);
+
+	// Ajustar cursor para no salirse del rango
+	if (total > 0) {
+	    cursor = clamp(cursor, 0, total - 1);
+	} else {
+	    cursor = 0;
+	}
+
 var last_index = min(total - 1, top_index + items_per_page - 1);
 
 for (var i = top_index; i <= last_index; i++) {
@@ -39,7 +47,7 @@ for (var i = top_index; i <= last_index; i++) {
     var yy = list_y + row * line_h;
     var it = items[i];
 
-    // === Cursor (usa sprite si es el seleccionado) ===
+    //Cursor (usa sprite si es el seleccionado) 
     if (i == cursor) {
         if (sprite_exists(spr_cursor)) {
             var cursor_y = yy + (line_h / 2) - (sprite_get_height(spr_cursor) / 2);
@@ -50,24 +58,24 @@ for (var i = top_index; i <= last_index; i++) {
         }
     }
 
-    // === Texto del ítem ===
+    //Texto del ítem 
     draw_set_color(c_white);
     draw_text(list_x, yy, it.name + "   x" + string(it.count));
 }
 
-// === Línea divisoria blanca (estilo bloque) ===
-draw_set_color(c_white);
-var divider_y = gui_y + gui_h - 80;
-var thickness = 3; // ← grosor de la línea
-draw_rectangle(gui_x, divider_y, gui_x + gui_w, divider_y + thickness, false);
+	//Línea divisoria blanca (estilo bloque)
+	draw_set_color(c_white);
+	var divider_y = gui_y + gui_h - 80;
+	var thickness = 3; // grosor de la línea
+	draw_rectangle(gui_x, divider_y, gui_x + gui_w, divider_y + thickness, false);
 
-// === Descripción del ítem seleccionado ===
-var desc_x = gui_x + 16;
-var desc_y = gui_y + gui_h - 64;
+	//Descripción del ítem seleccionado
+	var desc_x = gui_x + 16;
+	var desc_y = gui_y + gui_h - 64;
 
-if (total > 0) {
-    var sel = items[cursor];
-    draw_text(desc_x, desc_y, sel.desc);
-} else {
-    draw_text(desc_x, desc_y, "Inventario vacio.");
-}
+	if (total > 0) {
+	    var sel = items[cursor];
+	    draw_text(desc_x, desc_y, sel.desc);
+	} else {
+	    draw_text(desc_x, desc_y, "Inventario vacio.");
+	}

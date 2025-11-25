@@ -230,3 +230,9 @@ if (is_doing_act) {
         act_frame = 0;
     }
 }
+
+//pa q no se mueva el player en la room donde estabamos
+if (room = rm_Battle){
+obj_Player.visible = false;
+obj_Player.can_move = false;
+}
