@@ -7,7 +7,7 @@ if place_meeting(x,y,obj_Player) and obj_Player.can_move && (keyboard_check_pres
     
     if (next_enemy != enemy_id && next_enemy != "all_defeated") {
         // Este no es el siguiente enemigo en la secuencia
-        instantiated.text[0] = "Todavia no es mi turno...";
+        instantiated.text[0] = "Me rindo...";
         instantiated.battle_on_end = false; // No iniciar batalla
     } 
     else if (check_progress && scr_check_progress(enemy_id) == 1) {

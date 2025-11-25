@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":30.985579,
+  "duration":92.29932,
   "exportDir":"",
   "name":"snd_ruinas",
   "parent":{
