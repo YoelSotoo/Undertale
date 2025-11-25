@@ -13,12 +13,34 @@ enemy_bullet_damage = 4;
 // Mapeo según el objeto que vino del textbox:
 switch (global.current_enemy) {
     case obj_Enemy:
-        enemy_sprite        = spr_Enemy_fury;
+        enemy_sprite        = spr_Enemy_fury; //ENEMIGO EN BATALLA
 		enemy_happy_sprite = spr_Enemy_happy; // Sprite cuando es derrotado
         enemy_x             = 545;
         enemy_y             = 256;
         enemy_pattern       = "basic";
         enemy_bullet_damage = 4;
+        break;
+	case obj_Enemy2:  // ← NUEVO ENEMIGO
+        enemy_sprite = spr_recursos_enemi_2;
+        enemy_happy_sprite = spr_recursos_enemi_7;
+        enemy_x = 545;
+        enemy_y = 256;
+        enemy_pattern = "circle";  // ← NUEVO PATRÓN
+        enemy_bullet_damage = 3;
+        enemy_hp = 40;  // ← NUEVOS STATS
+        enemy_max_hp = 40;
+        enemy_defense = 8;
+        break;
+	case obj_Enemy3:  // ← NUEVO ENEMIGO
+        enemy_sprite = spr_bs_3;
+        enemy_happy_sprite = spr_bs_ded3;
+        enemy_x = 545;
+        enemy_y = 256;
+        enemy_pattern = "circle";  // ← NUEVO PATRÓN
+        enemy_bullet_damage = 3;
+        enemy_hp = 40;  // ← NUEVOS STATS
+        enemy_max_hp = 40;
+        enemy_defense = 8;
         break;
 }
 
