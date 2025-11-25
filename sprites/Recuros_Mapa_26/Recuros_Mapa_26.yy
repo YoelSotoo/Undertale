@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Mapa2",
-    "path":"folders/Sprites/Mapas/Mapa2.yy",
+    "name":"recursosyoel",
+    "path":"folders/Sprites/Mapas/recursosyoel.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
