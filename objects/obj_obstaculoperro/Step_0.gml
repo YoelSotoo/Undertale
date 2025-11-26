@@ -1,7 +1,7 @@
 x += vel_x;
 
 // si sale de la pantalla, destruir
-if (x < -64) instance_destroy();
+if (x < -600) instance_destroy();
 
 
 if (keyboard_check_pressed(vk_right) && !saltando) {

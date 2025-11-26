@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_carro_encendiendo",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":4.8735147,
+  "exportDir":"",
+  "name":"snd_carro_encendiendo",
+  "parent":{
+    "name":"Sonidos_Minujuego_Carro",
+    "path":"folders/Sounds/Sonidos_Minujuego_Carro.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_carro_encendiendo.mp3",
+  "volume":1.0,
+}

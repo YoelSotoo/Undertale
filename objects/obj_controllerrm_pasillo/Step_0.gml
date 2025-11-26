@@ -1,20 +1,27 @@
-// mientras el contador no haya acabado
-
-if (!game_start) {
+if (intro_done && !countdown_done)
+{
     tiempo--;
 
-    // cuando el tiempo llega a 0, bajamos el contador
     if (tiempo <= 0) {
         contador--;
         tiempo = room_speed;
     }
 
-    // si llega a 0 -> iniciar juego
     if (contador < 0) {
+        countdown_done = true;
         game_start = true;
+        obj_carrisk.visible = true; 
     }
 }
 
-if keyboard_check(vk_f4){
-window_set_fullscreen(true);
+
+if (game_start)
+{
+    minijuego_tiempo--;
+
+    if (minijuego_tiempo <= 0) {
+        room_goto(rm_finMinijuego);
+    }
 }
+// No moverse si el juego está pausado
+if (global.game_paused) exit;
