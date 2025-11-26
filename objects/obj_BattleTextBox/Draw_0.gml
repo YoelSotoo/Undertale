@@ -93,4 +93,6 @@ if (speaker_sprite[0] != noone) {
 
 // Dibuja el texto
 var _drawtext = string_copy(text[page], 1, draw_char);
+draw_set_color(c_white);
+draw_set_alpha(1);
 draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border, _drawtext, line_sep, line_width);

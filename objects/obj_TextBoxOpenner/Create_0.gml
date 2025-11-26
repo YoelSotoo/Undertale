@@ -10,4 +10,5 @@ enemy_to_battle = noone;
 enemy_id = "enemy1"; // Valor por defecto
 check_progress = false;
 
-show_debug_message("🔄 TextBoxOpener reiniciado - Enemy: " + string(enemy_id));
+show_debug_message("TextBoxOpener reiniciado - Enemy: " + string(enemy_id));
+

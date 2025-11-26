@@ -24,9 +24,9 @@ if (!instance_exists(obj_game_control)) {
 }
 
 // Crear obj_music_controller si no existe
-//if (!instance_exists(obj_music_controller)) {
-//    instance_create_layer(x, y, "Game_Controls", obj_music_controller);
-//}
+if (!instance_exists(obj_music_controller)) {
+    instance_create_layer(x, y, "Game_Controls", obj_music_controller);
+}
 
 
 //asi es la vida asi tan complicada
