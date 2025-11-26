@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_should_create_wave",
   "parent":{
-    "name":"SCRS",
-    "path":"folders/Battle_System/SCRS.yy",
+    "name":"ATAQUES",
+    "path":"folders/Battle_System/SCRS/ATAQUES.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

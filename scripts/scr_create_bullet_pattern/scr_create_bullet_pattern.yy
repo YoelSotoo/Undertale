@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_create_bullet_pattern",
   "parent":{
-    "name":"SCRS",
-    "path":"folders/Battle_System/SCRS.yy",
+    "name":"ATAQUES",
+    "path":"folders/Battle_System/SCRS/ATAQUES.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

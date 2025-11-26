@@ -202,3 +202,10 @@ if (act_menu_visible) {
     var soul_y = menu_y + 20 + (current_act_selection * 30);
     draw_sprite(spr_menu_cursor, 0, menu_x + 15, soul_y);
 }
+
+// === DEBUG ===
+if (keyboard_check_pressed(ord("M"))) {
+    show_debug_message("🔘 ButtonController - UISelectionMenu: " + string(global.UISelectionMenu));
+    show_debug_message("🔘 ButtonController - BattleMenu: " + string(global.BattleMenu));
+}
+

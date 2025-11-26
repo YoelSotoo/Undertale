@@ -1,3 +1,10 @@
+// === DEBUG TEMPORAL ===
+if (global.turn_state != "PLAYER_TURN") {
+    show_debug_message("❌ ESTADO INCORRECTO: " + string(global.turn_state));
+}
+
+
+
 // Verificar si el jugador murió
 if (global.player_hp <= 0 && !is_player_dead) {
     global.player_hp = 0;

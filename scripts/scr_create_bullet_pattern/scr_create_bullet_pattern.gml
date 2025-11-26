@@ -46,6 +46,20 @@ function scr_create_bullet_pattern(_battle, _pattern, _pattern_timer) {
                 b.alarm[0] = i * 20;
             }
             break;
+			case "muffet_circle":
+		    var num_bullets = 8;
+		    for (var i = 0; i < num_bullets; i++) {
+		        // Usar OBJ_PROYECTIL_ARAÑA en lugar de obj_proyectil_enemy
+		        var b = instance_create_layer(_battle.enemy_x, _battle.enemy_y, "Instances", obj_proyectil_arana);
+		        b.damage = _battle.enemy_bullet_damage;
+		        b.speed = 1.8;
+		        b.direction = (360 / num_bullets) * i;  // Dirección radial
+		        b.pattern = "muffet_circle";
+		        b.image_angle = b.direction;  // Que rote según su dirección
+				
+				
+		    }
+		    break;
             
         default: // "basic" y cualquier otro
             var b = instance_create_layer(_battle.enemy_x, _battle.enemy_y, "Instances", obj_proyectil_enemy);

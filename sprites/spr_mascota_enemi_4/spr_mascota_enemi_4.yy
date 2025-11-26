@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_recursos_enemi_4",
+  "%Name":"spr_mascota_enemi_4",
   "bboxMode":0,
   "bbox_bottom":95,
   "bbox_left":0,
@@ -22,7 +22,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"31d90179-3fc6-4f1e-ac17-e8d3775d93fd","blendMode":0,"displayName":"default","isLocked":false,"name":"31d90179-3fc6-4f1e-ac17-e8d3775d93fd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_recursos_enemi_4",
+  "name":"spr_mascota_enemi_4",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -34,7 +34,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_recursos_enemi",
+    "%Name":"spr_mascota_enemi_4",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -58,7 +58,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_recursos_enemi",
+    "name":"spr_mascota_enemi_4",
     "playback":1,
     "playbackSpeed":2.0,
     "playbackSpeedType":0,
@@ -72,10 +72,10 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"32c0b63e-765e-4dc0-a8af-b7b1bc490f40","path":"sprites/spr_recursos_enemi_4/spr_recursos_enemi_4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"32c0b63e-765e-4dc0-a8af-b7b1bc490f40","path":"sprites/spr_mascota_enemi_4/spr_mascota_enemi_4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"bbbe28c7-fc80-4eee-b17a-1442b928c857","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b44dfacc-3ff6-4869-bb18-08a27c2d7f71","path":"sprites/spr_recursos_enemi_4/spr_recursos_enemi_4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b44dfacc-3ff6-4869-bb18-08a27c2d7f71","path":"sprites/spr_mascota_enemi_4/spr_mascota_enemi_4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a4d25d27-3dc9-4fa3-ba62-9d08cb07a687","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_proyectil_enemy",
+  "%Name":"obj_proyectil_arana",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_soul","path":"objects/obj_soul/obj_soul.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_proyectil_enemy",
+  "name":"obj_proyectil_arana",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemi1",
-    "path":"folders/Battle_System/Objects/Ataques enemigos/enemi1.yy",
+    "name":"enemi2",
+    "path":"folders/Battle_System/Objects/Ataques enemigos/enemi2.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_recursos_f_1",
-    "path":"sprites/spr_recursos_f_1/spr_recursos_f_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

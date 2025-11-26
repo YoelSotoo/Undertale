@@ -1,6 +1,18 @@
 // Usar SOLO una variable para estados
 global.turn_state = "PLAYER_TURN";
 image_speed = 0.1;
+global.BattleMenu = 0;
+global.UISelectionMenu = 0;
+
+with (obj_fight_minigame) instance_destroy();
+with (obj_ButtonController) instance_destroy();
+// Crear nuevo ButtonController
+instance_create_layer(0, 0, "Instances", obj_ButtonController);
+
+show_debug_message("🎮 SISTEMA DE BATALLA REINICIADO");
+show_debug_message("🎮 Turn State: " + string(global.turn_state));
+show_debug_message("🎮 BattleMenu: " + string(global.BattleMenu));
+show_debug_message("🎮 UISelectionMenu: " + string(global.UISelectionMenu));
 
 // Defaults
 enemy_sprite  = noone;
@@ -20,18 +32,18 @@ switch (global.current_enemy) {
         enemy_pattern       = "basic";
         enemy_bullet_damage = 4;
         break;
-	case obj_Enemy2:  // ← NUEVO ENEMIGO
+	case obj_Enemy2:  // ← NUEVO ENEMIGO ARAÑA
         enemy_sprite = spr_recursos_enemi_2;
         enemy_happy_sprite = spr_recursos_enemi_7;
         enemy_x = 545;
         enemy_y = 256;
-        enemy_pattern = "circle";  // ← NUEVO PATRÓN
+        enemy_pattern = "muffet_circle";  // ← NUEVO PATRÓN
         enemy_bullet_damage = 3;
         enemy_hp = 40;  // ← NUEVOS STATS
         enemy_max_hp = 40;
         enemy_defense = 8;
-        break;
-	case obj_Enemy3:  // ← NUEVO ENEMIGO
+        break; 
+	case obj_Enemy3:  // ← NUEVO ENEMIGO FLOWEY
         enemy_sprite = spr_bs_3;
         enemy_happy_sprite = spr_bs_ded3;
         enemy_x = 545;
