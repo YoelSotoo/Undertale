@@ -27,5 +27,5 @@ setup = false;
 speaker_sprite[0] = noone;
 
 //Battle
-battle_on_end = false;
+battle_on_end = true;
 enemy_to_battle = noone;
