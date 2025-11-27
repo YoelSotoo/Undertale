@@ -50,15 +50,19 @@ if (key_enter) {
     switch (selected) {
         case 0: // CONTINUAR
             // EN LUGAR DE IRNOS DE GOLPE, ACTIVAMOS LA TRANSICIÓN
-            if (room_exists(Rm_Ruins_Inicio)) {
+            if (room_exists(Rm_Ruins_Tutorial)) {
                 audio_play_sound(snd_seleccionar, 1, false); // Sonido confirmación
-                target_room = Rm_Ruins_Inicio;
+                target_room = Rm_Ruins_Tutorial;
                 transitioning = true; // <--- ESTO INICIA EL EFECTO
             }
             break;
 
         case 1: // REINICIAR
             // Lógica de reinicio
+            break;
+		case 2: // SALIR (NUEVO)
+	            audio_play_sound(snd_seleccionar, 1, false);
+	            game_end(); // <--- ESTO CIERRA EL JUEGO
             break;
     }
 }

@@ -1,5 +1,5 @@
 // Configuración del menú
-options = ["CONTINUAR", "REINICIAR"];
+options = ["CONTINUAR", "REINICIAR", "SALIR"];
 option_count = array_length(options);
 
 selected = 0; // 0 es la primera opción, 1 es la segunda

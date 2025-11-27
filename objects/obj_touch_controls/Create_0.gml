@@ -1,4 +1,5 @@
 // --- 1. CONFIGURACIÓN DE PANTALLA ---
+depth = -10000; // Profundidad muy baja para que se dibuje ENCIMA de todo
 display_set_gui_size(1280, 720); // Forzamos una resolución fija para la interfaz
 var gui_w = 1280;
 var gui_h = 720;

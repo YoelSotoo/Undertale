@@ -166,6 +166,7 @@
     {"id":{"name":"obj_obstaculoperro","path":"objects/obj_obstaculoperro/obj_obstaculoperro.yy",},},
     {"id":{"name":"obj_oscurecer","path":"objects/obj_oscurecer/obj_oscurecer.yy",},},
     {"id":{"name":"obj_Params","path":"objects/obj_Params/obj_Params.yy",},},
+    {"id":{"name":"obj_pausa","path":"objects/obj_pausa/obj_pausa.yy",},},
     {"id":{"name":"obj_perrocomiendo","path":"objects/obj_perrocomiendo/obj_perrocomiendo.yy",},},
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"obj_proyectil_arana","path":"objects/obj_proyectil_arana/obj_proyectil_arana.yy",},},
