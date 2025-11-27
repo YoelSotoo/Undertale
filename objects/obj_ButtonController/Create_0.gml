@@ -35,6 +35,10 @@ act_options = ["Provocar", "Meditar", "Rezar"];
 current_act_selection = 0;
 act_description = "";
 
+// --- SISTEMA DE ITEMS ---
+item_menu_visible = false;
+current_item_selection = 0;
+
 // --- VARIABLES DE MEMORIA TÁCTIL (Para evitar rebotes) ---
 last_t_l = false; last_t_r = false; last_t_u = false; last_t_d = false;
 last_t_z = false; last_t_x = false;

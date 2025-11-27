@@ -78,14 +78,14 @@ draw_set_color(c_lime);
 draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_percent), bar_y + bar_height, false);
 
 // Texto de HP
-draw_set_color(c_white);
-draw_set_halign(fa_center);
-draw_text(enemy_x, bar_y - 15, string(enemy_hp) + "/" + string(enemy_max_hp));
+//draw_set_color(c_white);
+//draw_set_halign(fa_center);
+//draw_text(enemy_x, bar_y - 15, string(enemy_hp) + "/" + string(enemy_max_hp));
 
 // DEBUG MEJORADO
 draw_set_halign(fa_left);
-draw_text(10, 10, "Jugador HP: " + string(global.player_hp) + "/" + string(global.player_max_hp));
+//draw_text(10, 10, "Jugador HP: " + string(global.player_hp) + "/" + string(global.player_max_hp));
 draw_text(10, 30, "Enemigo HP: " + string(enemy_hp) + "/" + string(enemy_max_hp));
 draw_text(10, 50, "Inv Frames: " + string(global.inv_frames));
 draw_text(10, 70, "Turn State: " + string(global.turn_state));
-draw_text(10, 90, "Proyectiles: " + string(instance_number(obj_proyectil_enemy)));
+//draw_text(10, 90, "Proyectiles: " + string(instance_number(obj_proyectil_enemy)));
