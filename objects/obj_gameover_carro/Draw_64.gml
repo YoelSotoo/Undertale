@@ -80,3 +80,13 @@ var cur_y = (opcion == 0) ? txt1_y : txt2_y;
 
 // Dibujar cursor
 draw_sprite(spr_cursor, 0, cur_x, cur_y);
+
+// Dibujar botones TOUCH
+draw_set_alpha(0.8);
+
+draw_sprite(spr_btnUP, 0, btn_up_x, btn_up_y);
+draw_sprite(spr_btnDN, 0, btn_dn_x, btn_dn_y);
+draw_sprite(spr_btnZ, 0, btn_ok_x, btn_ok_y);
+
+draw_set_alpha(1);
+
