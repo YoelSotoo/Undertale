@@ -17,9 +17,12 @@ if (!variable_instance_exists(id, "text") || array_length(text) == 0) {
 
 page_number = array_length(text);
 
-// preparar arrays de largo correcto
+// --- PREPARAR ARRAYS ---
 for (var i = 0; i < page_number; i++) {
     text_length[i] = string_length(text[i]);
+    // Inicializamos offsets por defecto
+    text_x_offset[i] = 17;
+    portrait_x_offsetp[i] = 42;
 }
 
 draw_char = 0;
@@ -33,3 +36,4 @@ speaker_sprite[0] = noone;
 // battle
 battle_on_end = false;
 enemy_to_battle = noone;
+

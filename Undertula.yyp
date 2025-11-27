@@ -417,10 +417,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_labFinal","path":"rooms/rm_labFinal/rm_labFinal.yy",},},
     {"roomId":{"name":"Rm_Ruins_Inicio","path":"rooms/Rm_Ruins_Inicio/Rm_Ruins_Inicio.yy",},},
     {"roomId":{"name":"menuinicio","path":"rooms/menuinicio/menuinicio.yy",},},
     {"roomId":{"name":"rm_carreratest","path":"rooms/rm_carreratest/rm_carreratest.yy",},},
-    {"roomId":{"name":"rm_labFinal","path":"rooms/rm_labFinal/rm_labFinal.yy",},},
     {"roomId":{"name":"rm31","path":"rooms/rm31/rm31.yy",},},
     {"roomId":{"name":"rm41","path":"rooms/rm41/rm41.yy",},},
     {"roomId":{"name":"rm_shop","path":"rooms/rm_shop/rm_shop.yy",},},
