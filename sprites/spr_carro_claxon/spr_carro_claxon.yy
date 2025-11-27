@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_carro_claxon",
   "bboxMode":0,
-  "bbox_bottom":59,
+  "bbox_bottom":36,
   "bbox_left":0,
-  "bbox_right":59,
+  "bbox_right":40,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"5f5a4648-b2e2-4b6c-8cfb-3d3434550748","name":"5f5a4648-b2e2-4b6c-8cfb-3d3434550748","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"41d14606-d3bc-4310-bcaf-ee4620719f1b","name":"41d14606-d3bc-4310-bcaf-ee4620719f1b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":60,
+  "height":37,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"b8ecd067-dec8-4467-a3d1-3b135e0043b0","blendMode":0,"displayName":"default","isLocked":false,"name":"b8ecd067-dec8-4467-a3d1-3b135e0043b0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"79862bcf-82be-458c-b941-396978525d57","blendMode":0,"displayName":"default","isLocked":false,"name":"79862bcf-82be-458c-b941-396978525d57","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_carro_claxon",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5f5a4648-b2e2-4b6c-8cfb-3d3434550748","path":"sprites/spr_carro_claxon/spr_carro_claxon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5defc313-702b-438c-9aa5-6ed3f3d615a7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"41d14606-d3bc-4310-bcaf-ee4620719f1b","path":"sprites/spr_carro_claxon/spr_carro_claxon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c1c5d417-3211-4fc2-8b5d-9e7f06e789ca","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":60,
+  "width":41,
 }

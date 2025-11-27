@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_carro_saltar",
   "bboxMode":0,
-  "bbox_bottom":59,
+  "bbox_bottom":36,
   "bbox_left":0,
-  "bbox_right":59,
+  "bbox_right":40,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"b9724edc-5657-484a-a4d9-557fbe3d7619","name":"b9724edc-5657-484a-a4d9-557fbe3d7619","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3540e0e6-3642-4442-a23d-282c8d2a18b9","name":"3540e0e6-3642-4442-a23d-282c8d2a18b9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":60,
+  "height":37,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"85aa3f55-5cc4-446e-972c-64797c20fe8b","blendMode":0,"displayName":"default","isLocked":false,"name":"85aa3f55-5cc4-446e-972c-64797c20fe8b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3a1369e4-da85-4677-8378-3abac84645c7","blendMode":0,"displayName":"default","isLocked":false,"name":"3a1369e4-da85-4677-8378-3abac84645c7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_carro_saltar",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9724edc-5657-484a-a4d9-557fbe3d7619","path":"sprites/spr_carro_saltar/spr_carro_saltar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dda57f91-110c-46cc-acbf-e074ba2a96bd","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3540e0e6-3642-4442-a23d-282c8d2a18b9","path":"sprites/spr_carro_saltar/spr_carro_saltar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"79450d43-7beb-4c80-a4f3-c460c3c98180","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":60,
+  "width":41,
 }
