@@ -29,3 +29,8 @@ speaker_sprite[0] = noone;
 //Battle
 battle_on_end = true;
 enemy_to_battle = noone;
+
+// --- VARIABLES DE CONTROL TÁCTIL (MEMORIA) ---
+// Sirven para detectar "un solo clic" y no pasar todo el texto de golpe
+prev_touch_z = false;
+prev_touch_x = false;

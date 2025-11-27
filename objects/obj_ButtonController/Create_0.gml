@@ -1,44 +1,40 @@
-// Evento CREATE de obj_ButtonController
-
 // --- POSICIÓN DE LOS BOTONES ---
-// Coordenadas X para cada uno de los 4 botones del menú
 ButtonPositions_X[0] = 32;
 ButtonPositions_X[1] = 71;
 ButtonPositions_X[2] = 110;
 
-
 // --- SPRITES DE LOS BOTONES ---
-// ¡IMPORTANTE! Reemplaza los nombres de la derecha con los nombres de TUS sprites.
-// Cada sprite debe tener 2 frames: (0 = normal, 1 = seleccionado)
-ButtonSprites[0] = spr__btn_fight;  // Reemplaza por tu sprite de LUCHA
-ButtonSprites[1] = spr_btn_actuar; // Reemplaza por tu sprite de ACTUAR
-ButtonSprites[2] = spr_btn_item;   // Reemplaza por tu sprite de OBJETO
-
+ButtonSprites[0] = spr__btn_fight; 
+ButtonSprites[1] = spr_btn_actuar;
+ButtonSprites[2] = spr_btn_item;   
 
 button_count = 3;
-// --- VARIABLES DE CONTROL DEL MENÚ ---
-Dir = 0; // Variable de dirección para la navegación
-MonsterReferenceNum = 0; // Guarda el enemigo seleccionado
-BelowUIReferenceNum = 0; // Guarda la opción del menú principal seleccionada
 
-// --- VARIABLES DE RECOMPENSA DE BATALLA ---
-// Guarda el EXP y Oro iniciales para calcular la ganancia al final
-CurrentEXP = global.player_exp; // Usa tu variable global de EXP
-CurrentGOL = 0; // Reemplaza con tu variable global de Oro	 si la tienes
+// --- VARIABLES DE CONTROL ---
+Dir = 0;
+MonsterReferenceNum = 0; 
+BelowUIReferenceNum = 0; 
 
-// --- VARIABLES DE FIN DE BATALLA ---
-WinText = noone;   // Para guardar el objeto de texto de victoria
-BattleWon = false; // Para saber si la batalla ya se ganó
+// --- RECOMPENSA ---
+CurrentEXP = global.player_exp; 
+CurrentGOL = 0; 
 
-// --- INICIALIZACIÓN DE VARIABLES GLOBALES ---
-// Este código las necesita para funcionar. Ponlas en tu obj_Params si no existen.
+// --- FIN DE BATALLA ---
+WinText = noone;   
+BattleWon = false; 
+
+// --- GLOBALES ---
 if (!variable_global_exists("BattleMenu")) { global.BattleMenu = 0; }
 if (!variable_global_exists("UISelectionMenu")) { global.UISelectionMenu = 0; }
 if (!variable_global_exists("Monsters")) { global.Monsters = 0; }
 if (!variable_global_exists("Monster")) { global.Monster = [noone, noone, noone]; }
 
-// Sistema de ACTs/////////////////////////////////////////////
+// --- SISTEMA DE ACTs ---
 act_menu_visible = false;
 act_options = ["Provocar", "Meditar", "Rezar"];
 current_act_selection = 0;
 act_description = "";
+
+// --- VARIABLES DE MEMORIA TÁCTIL (Para evitar rebotes) ---
+last_t_l = false; last_t_r = false; last_t_u = false; last_t_d = false;
+last_t_z = false; last_t_x = false;
