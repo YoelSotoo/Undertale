@@ -1,3 +1,3 @@
-target_x = 1746;
-target_y = 168;
+target_x = 149;
+target_y = 444;
 target_rm = rm_labFinal;

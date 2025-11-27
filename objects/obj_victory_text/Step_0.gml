@@ -18,7 +18,7 @@ life_timer--;
 if (life_timer <= 0) {
 	//pa q se pueda mober el player otra vez y umm ah q se vea otra ve
     instance_destroy();
-	room_goto(Rm_Ruins_Tutorial);
+	room_goto(rm_labFinal);
 	obj_Player.visible = true;
 	obj_Player.can_move = true;
 }

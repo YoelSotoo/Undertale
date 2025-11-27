@@ -1,4 +1,4 @@
-if (room == Rm_Ruins_Inicio || room == Rm_Ruins_Inicio_2 || room == Rm_Ruins_Tutorial)
+if (room == Rm_Ruins_Inicio || room == Rm_Ruins_Inicio_2 || room == rm_labFinal)
 {
     scr_music_play(snd_ruinas);
 }
