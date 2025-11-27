@@ -50,9 +50,9 @@ if (key_enter) {
     switch (selected) {
         case 0: // CONTINUAR
             // EN LUGAR DE IRNOS DE GOLPE, ACTIVAMOS LA TRANSICIÓN
-            if (room_exists(rm_labFinal)) {
+            if (room_exists(Rm_Ruins_Inicio)) {
                 audio_play_sound(snd_seleccionar, 1, false); // Sonido confirmación
-                target_room = rm_labFinal;
+                target_room =  Rm_Ruins_Inicio;
                 transitioning = true; // <--- ESTO INICIA EL EFECTO
             }
             break;
