@@ -31,6 +31,9 @@ for (var i = 0; i < max_fingers; i++) {
         if (point_in_rectangle(mx, my, btn_x_x, btn_x_y, btn_x_x + size_col, btn_x_y + size_col)) x_held = true;
         
         if (point_in_rectangle(mx, my, btn_c_x, btn_c_y, btn_c_x + size_col, btn_c_y + size_col)) c_held = true;
+		if (point_in_rectangle(mx, my, btn_c_x, btn_c_y, btn_c_x + size_col, btn_c_y + size_col)) {
+             c_held = true; 
+        }
     }
 }
 
