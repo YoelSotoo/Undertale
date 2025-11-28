@@ -106,3 +106,10 @@ if (xspd != 0 || yspd != 0) {
     image_speed = 0;
     image_index = 0;
 }
+
+if (room = rm_labFinal){
+global.roomcarro = rm46enemy3;
+}
+else if(room = rm33){
+global.roomcarro = rm41;
+}
