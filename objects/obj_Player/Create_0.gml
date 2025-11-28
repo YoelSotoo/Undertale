@@ -38,3 +38,5 @@ if (!variable_global_exists("dialogue_active")) {
 }
 
 global.roomcarro = rm41;
+
+interact_cooldown = 0; // Tiempo de espera para volver a interactuar

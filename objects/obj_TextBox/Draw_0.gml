@@ -1,70 +1,17 @@
-// =================== INPUT Y POSICIÓN ===================
-var confirm_key = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
-var skip_key = keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shift);
+/// DRAW EVENT - obj_TextBox (SOLO DIBUJO)
 
-// CORRECCIÓN 1: Coordenadas fijas de GUI
+// 1. CALCULAR POSICIÓN (Relativa a la cámara)
 textbox_x = camera_get_view_x(view_camera[0]) + 20;
 textbox_y = camera_get_view_y(view_camera[0]) + 154;
 
-global.dialogue_active = true;  // ← BLOQUEAR MOVIMIENTO
-
-// =================== SETUP (Solo se ejecuta una vez) ===================
-if (setup == false) {
-    setup = true;
-    obj_Player.can_move = false;
-    
-    draw_set_font(fnt_tutorial);
-    draw_set_valign(fa_top);
-    draw_set_halign(fa_left);
-    
-    page_number = array_length(text);
-    for (var p = 0; p < page_number; p++) {
-        text_length[p] = string_length(text[p]);
-        text_x_offset[p] = (speaker_sprite[0] == noone) ? 17 : 78;
-        portrait_x_offsetp[p] = 42;
-        line_width = textbox_width - border*2 - text_x_offset[p];
-    }
-}
-
-// =================== LÓGICA DEL TEXTO ===================
-if (draw_char < text_length[page]) {
-    draw_char += text_speed;
-    draw_char = clamp(draw_char, 0, text_length[page]);
-}
-
-// --- Nueva lógica unificada para avanzar texto ---
-if (confirm_key || skip_key) {
-
-    if (draw_char < text_length[page]) {
-        draw_char = text_length[page];
-
-    } else {
-        if (battle_on_end == true) {
-
-            global.battle_previous_room = room;
-            global.battle_player_x = obj_Player.x;
-            global.battle_player_y = obj_Player.y;
-
-            global.current_enemy = enemy_to_battle;
-
-            room_goto(rm_Battle);
-
-        } else {
-            obj_Player.can_move = true;
-            global.dialogue_active = false;
-            instance_destroy();
-        }
-    }
-}
-
-// =================== DIBUJADO ===================
-
-// --- Asegurar que TODO se dibuje en blanco ---
-draw_set_color(c_white);
-
-// Dibuja el cuadro de texto
+// 2. DIBUJAR CAJA
 var txtb_sprite_w = sprite_get_width(txtb_sprite);
 var txtb_sprite_h = sprite_get_height(txtb_sprite);
+
+// Asegurar color blanco
+draw_set_color(c_white);
+draw_set_alpha(1);
+
 draw_sprite_ext(
     txtb_sprite, txtb_image,
     textbox_x, textbox_y,
@@ -73,26 +20,41 @@ draw_sprite_ext(
     0, c_white, 1
 );
 
-// Dibuja retrato
+// 3. DIBUJAR RETRATO
 if (speaker_sprite[0] != noone) {
-    sprite_index = speaker_sprite[page];
-    if (draw_char == text_length[page]) image_index = 0;
+    // Seguridad para no crashear si falta sprite
+    var current_spr = speaker_sprite[0];
+    if (page < array_length(speaker_sprite)) current_spr = speaker_sprite[page];
 
-    var _speaker_x = textbox_x + portrait_x_offsetp[page];
-    var _speaker_y = textbox_y + (textbox_height / 2);
+    if (current_spr != noone) {
+        sprite_index = current_spr;
+        // Detener animación si el texto terminó
+        if (draw_char == text_length[page]) image_index = 0;
 
-    draw_sprite_ext(
-        sprite_index, image_index,
-        _speaker_x, _speaker_y,
-        55 / sprite_width, 55 / sprite_height,
-        0, c_white, 1
-    );
+        var _speaker_x = textbox_x + portrait_x_offsetp[page];
+        var _speaker_y = textbox_y + (textbox_height / 2);
+
+        // Ajustar escala (55px es tu referencia)
+        var s_w = sprite_get_width(current_spr);
+        var s_h = sprite_get_height(current_spr);
+        
+        draw_sprite_ext(
+            current_spr, image_index,
+            _speaker_x, _speaker_y,
+            55 / s_w, 55 / s_h,
+            0, c_white, 1
+        );
+    }
 }
 
-// --- Dibujar texto en blanco ---
+// 4. DIBUJAR TEXTO
 draw_set_color(c_white);
+draw_set_font(fnt_tutorial);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 
-var _drawtext = string_copy(text[page], 1, draw_char);
+var _drawtext = string_copy(text[page], 1, floor(draw_char));
+
 draw_text_ext(
     textbox_x + text_x_offset[page] + border,
     textbox_y + border,

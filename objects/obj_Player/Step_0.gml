@@ -1,3 +1,8 @@
+// Disminuir el enfriamiento si es mayor a 0
+if (interact_cooldown > 0) {
+    interact_cooldown--;
+}
+
 // =================== 1. CAPTURAR INPUTS ===================
 // Aquí usamos _HELD (Mantener) para movimiento y correr
 // Y usamos _PRESSED (Toque) para interactuar y menú
