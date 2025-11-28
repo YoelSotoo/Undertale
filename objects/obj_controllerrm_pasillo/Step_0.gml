@@ -20,7 +20,8 @@ if (game_start)
     minijuego_tiempo--;
 
     if (minijuego_tiempo <= 0) {
-        room_goto(rm_finMinijuego);
+        room_goto(global.roomcarro);
+		audio_stop_all();
     }
 }
 // No moverse si el juego está pausado
@@ -32,6 +33,7 @@ if (intro_done)
     // Y solo si NO existen
     if (!instance_exists(obj_botones_carro))
     {
-        instance_create_layer(0, 0, "Instances", obj_botones_carro);
+        instance_create_layer(0, 0, "Botones", obj_botones_carro);
     }
 }
+

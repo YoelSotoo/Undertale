@@ -37,3 +37,4 @@ if (!variable_global_exists("dialogue_active")) {
     global.dialogue_active = false;
 }
 
+global.roomcarro = rm41;

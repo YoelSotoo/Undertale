@@ -23,3 +23,7 @@ global.game_paused = false;
 audio_play_sound(snd_carro_encendiendo, 1, false);
 // activar fade luego de 4 segundos
 alarm[0] = room_speed * 3;
+
+obj_Player.visible = false;
+obj_Player.can_move = false;
+
