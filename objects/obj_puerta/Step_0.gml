@@ -18,9 +18,9 @@ if (place_meeting(x, y, obj_Player)) {
         msg_timer = 120; // 2 segundos visible
         
         // Definir texto según la puerta
-        if (enemy_req == "enemy1") msg_text = "Cerrado.\nVence a Toriel primero.";
-        else if (enemy_req == "enemy2") msg_text = "Bloqueado.\nPapyrus tiene la llave.";
-        else msg_text = "Está cerrada mágicamente.";
+        if (enemy_req == "enemy1") msg_text = "Cerrado.\nVence al Jefe primero.";
+        else if (enemy_req == "enemy2") msg_text = "Bloqueado.\nVence al Jefe primero.";
+        else msg_text = "Vence al Jefe primero.";
 
         // --- 2. EMPUJAR AL JUGADOR (REBOTE) ---
         var push_dir = point_direction(x, y, obj_Player.x, obj_Player.y);

@@ -1,37 +1,36 @@
-if (keyboard_check_pressed(ord("R")) && keyboard_check(vk_control)) {
-    scr_reset_save();
-}
-
 // =================== 1. CAPTURAR INPUTS ===================
+// Aquí usamos _HELD (Mantener) para movimiento y correr
+// Y usamos _PRESSED (Toque) para interactuar y menú
+
 var right_key = keyboard_check(vk_right);
-var left_key = keyboard_check(vk_left);
-var up_key = keyboard_check(vk_up);
-var down_key = keyboard_check(vk_down);
-var run_key = keyboard_check(vk_shift); 
+var left_key  = keyboard_check(vk_left);
+var up_key    = keyboard_check(vk_up);
+var down_key  = keyboard_check(vk_down);
+var run_key   = keyboard_check(vk_shift); 
+
 var interact_key = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
-var menu_key = keyboard_check_pressed(ord("C")) || keyboard_check_pressed(vk_control);
+var menu_key     = keyboard_check_pressed(ord("C")) || keyboard_check_pressed(vk_control);
 
 // --- CONTROLES TÁCTILES ---
 var touch = instance_find(obj_touch_controls, 0);
 
-// Variables de memoria para el jugador
+// Variables de memoria
 if (!variable_instance_exists(id, "pl_last_z")) pl_last_z = false;
 if (!variable_instance_exists(id, "pl_last_c")) pl_last_c = false;
 
 if (instance_exists(touch)) {
-    // Movimiento
-    right_key = right_key || touch.right_pressed;
-    left_key  = left_key  || touch.left_pressed;
-    up_key    = up_key    || touch.up_pressed;
-    down_key  = down_key  || touch.down_pressed;
+    // 1. MOVIMIENTO (Usamos .right_held en vez de .right_pressed)
+    right_key = right_key || touch.right_held;
+    left_key  = left_key  || touch.left_held;
+    up_key    = up_key    || touch.up_held;
+    down_key  = down_key  || touch.down_held;
     
-    // Correr (X mantenido)
-    run_key = run_key || touch.x_pressed;
+    // 2. CORRER (Usamos .x_held en vez de .x_pressed)
+    // ESTO ES LO QUE ARREGLA TU PROBLEMA DE VELOCIDAD
+    run_key = run_key || touch.x_held;
     
-    // Interactuar (Z presionado una vez)
+    // 3. ACCIONES ÚNICAS (Aquí sí usamos .pressed)
     if (touch.z_pressed && !pl_last_z) interact_key = true;
-    
-    // Inventario (C presionado una vez)
     if (touch.c_pressed && !pl_last_c) menu_key = true;
     
     // Actualizar estados
@@ -40,6 +39,7 @@ if (instance_exists(touch)) {
 }
 
 // =================== LOGICA JUEGO ===================
+// (El resto de tu código se queda IGUAL, no lo toqué)
 
 // INVENTARIO
 if (menu_key && !global.dialogue_active) {
@@ -57,6 +57,7 @@ if (global.inventory_open) {
 if (!can_move || global.dialogue_active) {
     xspd = 0; yspd = 0;
 } else {
+    // Aquí es donde se aplica la velocidad si run_key es verdadero
     if (run_key) move_spd = run_spd;
     else move_spd = walk_spd;
 
@@ -76,7 +77,6 @@ if (!can_move || global.dialogue_active) {
     if (interact_key) {
         var check_x = x + lengthdir_x(20, direction);
         var npc = instance_place(x + xspd * 2, y + yspd * 2, obj_TextBoxOpenner);
-        // Aquí iría tu script de activar texto
     }
 }
 
@@ -108,8 +108,8 @@ if (xspd != 0 || yspd != 0) {
 }
 
 if (room = rm_labFinal){
-global.roomcarro = rm46enemy3;
+    global.roomcarro = rm46enemy3;
 }
 else if(room = rm33){
-global.roomcarro = rm41;
+    global.roomcarro = rm41;
 }

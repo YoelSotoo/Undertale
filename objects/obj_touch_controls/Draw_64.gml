@@ -15,12 +15,12 @@ draw_sprite_ext(spr_btnZ, frame_z, btn_z_x, btn_z_y, scale, scale, 0, c_white, a
 // --- BOTÓN X (Cancelar/Correr) ---
 var frame_x = x_pressed ? 1 : 0;
 var alpha_x = x_pressed ? alpha_press : alpha_idle;
-draw_sprite_ext(spr_btnX, frame_x, btn_x_x, btn_x_y, scale, scale, 0, c_white, alpha_x);
+draw_sprite_ext(spr_btnC, frame_x, btn_x_x, btn_x_y, scale, scale, 0, c_white, alpha_x);
 
 // --- BOTÓN C (Menú) ---
 var frame_c = c_pressed ? 1 : 0;
 var alpha_c = c_pressed ? alpha_press : alpha_idle;
-draw_sprite_ext(spr_btnC, frame_c, btn_c_x, btn_c_y, scale, scale, 0, c_white, alpha_c);
+draw_sprite_ext(spr_btnX, frame_c, btn_c_x, btn_c_y, scale, scale, 0, c_white, alpha_c);
 
 
 // ==========================================
