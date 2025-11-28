@@ -18,11 +18,11 @@
     {"name":"inst_2F1DE14","path":"rooms/rm_lab5/rm_lab5.yy",},
     {"name":"inst_5F69ACDC","path":"rooms/rm_lab5/rm_lab5.yy",},
     {"name":"inst_6B751389","path":"rooms/rm_lab5/rm_lab5.yy",},
-    {"name":"inst_4E5C731E","path":"rooms/rm_lab5/rm_lab5.yy",},
     {"name":"inst_41233413","path":"rooms/rm_lab5/rm_lab5.yy",},
     {"name":"inst_674EF0BD","path":"rooms/rm_lab5/rm_lab5.yy",},
     {"name":"inst_580183EF","path":"rooms/rm_lab5/rm_lab5.yy",},
     {"name":"inst_7C81CD3C","path":"rooms/rm_lab5/rm_lab5.yy",},
+    {"name":"inst_4E5C731E","path":"rooms/rm_lab5/rm_lab5.yy",},
   ],
   "isDnd":false,
   "layers":[
